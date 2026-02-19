@@ -1,0 +1,17 @@
+{
+  "feature_cols": [
+    "weekday",
+    "is_weekend",
+    "day_of_month",
+    "days_since_payday",
+    "days_to_month_end",
+    "roll7_mean_spend",
+    "roll14_mean_spend",
+    "roll7_std_spend",
+    "prev_spend"
+  ],
+  "payday_day": 1,
+  "mae_test": 100.43471263102558,
+  "train_rows": 112,
+  "test_rows": 29
+}
