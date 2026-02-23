@@ -764,17 +764,6 @@ if page == "Home":
         _breakdown_item(next_event["name"], f"€{float(next_event['amount']):,.0f}", "EV", "flat")
     st.markdown("</div>", unsafe_allow_html=True)
 
-    if next_event is not None:
-        st.markdown(
-            (
-                "<div class='risk-card'>"
-                "Based on your usual spending habits across your full history, "
-                f"you’ll likely spend €{habit_spend_forecast:,.0f} for the rest of this month. "
-                f"If you keep going like this you will not be able to pay for {next_event['name']} coming up soon."
-                "</div>"
-            ),
-            unsafe_allow_html=True,
-        )
     st.markdown(f"Risk state: <span class='{risk_cls}'>{projection['risk_state']}</span>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -783,10 +772,6 @@ if page == "Home":
         st.info("No bad purchases flagged in the last 30 days.")
     else:
         st.dataframe(flagged.head(20), use_container_width=True)
-
-    st.subheader("Habit guardrails")
-    for g in guardrails:
-        st.write(f"- {g}")
 
 elif page == "Insights":
     st.subheader("Spending behavior")
