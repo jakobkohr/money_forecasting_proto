@@ -237,35 +237,10 @@ def project_balance(
     if not events_df.empty:
         event_sums = events_df.groupby("date")["amount"].sum().to_dict()
 
-    # Add expected recurring income so projections beyond month-end stay realistic.
-    income_sums = {}
-    salary_mask = (
-        (df["amount"] > 0)
-        & (
-            (df["is_recurring"] == 1)
-            | (df["category"].str.lower() == "income")
-            | (df["tags"].str.contains("salary", case=False, regex=True))
-        )
-    )
-    salary_tx = df[salary_mask].copy()
-    if not salary_tx.empty:
-        salary_day = int(salary_tx["date"].dt.day.median())
-        salary_tx["month"] = salary_tx["date"].dt.to_period("M")
-        salary_amount = float(salary_tx.groupby("month")["amount"].sum().median())
-        if salary_amount > 0:
-            months = pd.period_range(start=(as_of + timedelta(days=1)).to_period("M"), end=horizon.to_period("M"), freq="M")
-            for m in months:
-                month_start = m.to_timestamp(how="start").normalize()
-                max_day = int((month_start + pd.offsets.MonthEnd(0)).day)
-                payday = month_start + pd.Timedelta(days=min(salary_day, max_day) - 1)
-                if payday > as_of and payday <= horizon:
-                    income_sums[payday.normalize()] = income_sums.get(payday.normalize(), 0.0) + salary_amount
-
     balance = current_balance
     balance_series = []
 
     for d in date_range:
-        balance += float(income_sums.get(d.normalize(), 0.0))
         spend = float(predicted_daily_spend.get(d.normalize(), predicted_daily_spend.get(d, 0.0)))
         balance -= max(0.0, spend)
         balance -= float(event_sums.get(d.normalize(), 0.0))

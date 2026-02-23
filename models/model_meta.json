@@ -11,7 +11,7 @@
     "prev_spend"
   ],
   "payday_day": 1,
-  "mae_test": 100.43471263102558,
-  "train_rows": 112,
+  "mae_test": 102.9805184900325,
+  "train_rows": 113,
   "test_rows": 29
 }
