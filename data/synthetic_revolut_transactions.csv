@@ -1,285 +1,286 @@
 date,merchant,category,amount,is_recurring,balance_after,tags
-2025-09-01,Employer Payroll,Income,2850.0,1,3270.0,salary;recurring
-2025-09-01,Carrefour,Groceries,-32.97,0,3237.03,groceries
-2025-09-01,Soup & Salad,Eating out,-11.57,0,3225.46,eating_out;cheap_meal
-2025-09-01,Fuel Station,Transport,-2.6,0,3222.86,transport
-2025-09-02,Landlord / Rent,Rent,-1200.0,1,2022.86,rent;recurring
-2025-09-02,Local Market,Groceries,-33.43,0,1989.43,groceries
-2025-09-04,Spotify,Subscriptions,-10.99,1,1978.44,subscription;recurring
-2025-09-05,Steak & Co,Eating out,-49.95,0,1928.49,eating_out;weekend
-2025-09-06,Burger House,Eating out,-22.49,0,1906.0,eating_out;weekend
-2025-09-06,Cocktail Bar,Weekend activities,-54.75,0,1851.25,weekend;nightlife
-2025-09-07,Netflix,Subscriptions,-13.49,1,1837.76,subscription;recurring
-2025-09-07,Lidl,Groceries,-15.26,0,1822.5,groceries;weekend
-2025-09-07,Steak & Co,Eating out,-36.67,0,1785.83,eating_out;weekend
-2025-09-08,Tesco,Groceries,-20.07,0,1765.76,groceries
-2025-09-09,Lidl,Groceries,-15.29,0,1750.47,groceries
-2025-09-10,Lunch Bistro,Eating out,-17.46,0,1733.01,eating_out
-2025-09-10,Local Market,Groceries,-20.56,0,1712.45,groceries
-2025-09-10,Phone Plan,Subscriptions,-24.9,1,1687.55,subscription;recurring
-2025-09-11,ALDI,Groceries,-36.74,0,1650.81,groceries
-2025-09-11,Tram,Transport,-6.79,0,1644.02,transport
-2025-09-12,Lidl,Groceries,-25.13,0,1618.89,groceries;weekend
-2025-09-13,Tesco,Groceries,-23.81,0,1595.08,groceries;weekend
-2025-09-13,Taxi,Transport,-17.49,0,1577.59,transport;weekend;late_night
-2025-09-13,Online Shop,Shopping,-28.09,0,1549.5,shopping;impulse;weekend
-2025-09-14,Gym Membership,Subscriptions,-44.9,1,1504.6,subscription;recurring
-2025-09-14,Tesco,Groceries,-46.12,0,1458.48,groceries;weekend
-2025-09-15,Metro,Transport,-5.68,0,1452.8,transport
-2025-09-17,ALDI,Groceries,-20.2,0,1432.6,groceries
-2025-09-17,Fuel Station,Transport,-3.31,0,1429.29,transport
-2025-09-18,Cloud Storage,Subscriptions,-2.99,1,1426.3,subscription;recurring
-2025-09-18,Bus,Transport,-4.89,0,1421.41,transport
-2025-09-19,Pizza Place,Eating out,-20.09,0,1401.32,eating_out;weekend
-2025-09-20,Brunch Spot,Eating out,-25.06,0,1376.26,eating_out;weekend
-2025-09-20,Bolt,Transport,-33.64,0,1342.62,transport;weekend;late_night
-2025-09-20,Cocktail Bar,Weekend activities,-100.27,0,1242.35,weekend;nightlife
-2025-09-21,Late-Night Kebab,Eating out,-61.55,0,1180.8,eating_out;weekend
-2025-09-21,Taxi,Transport,-10.33,0,1170.47,transport;weekend;late_night
-2025-09-22,Insurance,Subscriptions,-38.5,1,1131.97,subscription;recurring
-2025-09-23,ALDI,Groceries,-20.78,0,1111.19,groceries
-2025-09-26,Concert Tickets,Weekend activities,-132.94,0,978.25,weekend;nightlife
-2025-09-27,Pizza Place,Eating out,-26.37,0,951.88,eating_out;weekend
-2025-09-28,Steak & Co,Eating out,-52.82,0,899.06,eating_out;weekend
-2025-09-28,Metro,Transport,-4.19,0,894.87,transport;weekend
-2025-09-30,Cafe,Eating out,-23.03,0,871.84,eating_out
-2025-10-01,Employer Payroll,Income,2850.0,1,3721.84,salary;recurring
-2025-10-01,Fuel Station,Transport,-7.23,0,3714.61,transport
-2025-10-02,Landlord / Rent,Rent,-1200.0,1,2514.61,rent;recurring
-2025-10-03,Bolt,Transport,-32.28,0,2482.33,transport;weekend;late_night
-2025-10-03,Night Out,Weekend activities,-36.15,0,2446.18,weekend;nightlife
-2025-10-03,Tesco,Groceries,-37.44,0,2408.74,groceries;weekend
-2025-10-03,Brunch Spot,Eating out,-46.53,0,2362.21,eating_out;weekend
-2025-10-04,Spotify,Subscriptions,-10.99,1,2351.22,subscription;recurring
-2025-10-04,Bus,Transport,-5.16,0,2346.06,transport;weekend
-2025-10-04,Steak & Co,Eating out,-24.49,0,2321.57,eating_out;weekend
-2025-10-04,Tesco,Groceries,-51.66,0,2269.91,groceries;weekend
-2025-10-04,Cocktail Bar,Weekend activities,-66.6,0,2203.31,weekend;nightlife
-2025-10-05,Night Out,Weekend activities,-50.91,0,2152.4,weekend;nightlife
-2025-10-06,Lidl,Groceries,-16.03,0,2136.37,groceries
-2025-10-07,Netflix,Subscriptions,-13.49,1,2122.88,subscription;recurring
-2025-10-07,Lidl,Groceries,-15.71,0,2107.17,groceries
-2025-10-08,Tesco,Groceries,-47.72,0,2059.45,groceries
-2025-10-09,Local Market,Groceries,-35.86,0,2023.59,groceries
-2025-10-09,Coffee & Bagel,Eating out,-22.95,0,2000.64,eating_out
-2025-10-10,Phone Plan,Subscriptions,-24.9,1,1975.74,subscription;recurring
-2025-10-11,Burger House,Eating out,-56.92,0,1918.82,eating_out;weekend
-2025-10-11,Local Market,Groceries,-20.96,0,1897.86,groceries;weekend
-2025-10-12,Burger House,Eating out,-44.31,0,1853.55,eating_out;weekend
-2025-10-12,Tram,Transport,-4.83,0,1848.72,transport;weekend
-2025-10-12,Club Entry,Weekend activities,-94.41,0,1754.31,weekend;nightlife
-2025-10-13,REWE,Groceries,-28.87,0,1725.44,groceries
-2025-10-14,Gym Membership,Subscriptions,-44.9,1,1680.54,subscription;recurring
-2025-10-15,Tram,Transport,-6.75,0,1673.79,transport
-2025-10-16,Lidl,Groceries,-31.73,0,1642.06,groceries
-2025-10-17,REWE,Groceries,-14.43,0,1627.63,groceries;weekend
-2025-10-17,Sushi Bar,Eating out,-46.64,0,1580.99,eating_out;weekend
-2025-10-17,Fuel Station,Transport,-1.91,0,1579.08,transport;weekend
-2025-10-17,Club Entry,Weekend activities,-94.86,0,1484.22,weekend;nightlife
-2025-10-18,Sports Event,Weekend activities,-73.4,0,1410.82,weekend;nightlife
-2025-10-18,Bolt,Transport,-9.06,0,1401.76,transport;weekend;late_night
-2025-10-18,Burger House,Eating out,-65.93,0,1335.83,eating_out;weekend
-2025-10-18,ALDI,Groceries,-26.81,0,1309.02,groceries;weekend
-2025-10-18,Cloud Storage,Subscriptions,-2.99,1,1306.03,subscription;recurring
-2025-10-22,Insurance,Subscriptions,-38.5,1,1267.53,subscription;recurring
-2025-10-22,ALDI,Groceries,-23.27,0,1244.26,groceries
-2025-10-23,Metro,Transport,-6.01,0,1238.25,transport
-2025-10-24,Uber,Transport,-31.36,0,1206.89,transport;weekend;late_night
-2025-10-24,Concert Tickets,Weekend activities,-38.12,0,1168.77,weekend;nightlife
-2025-10-25,Cocktail Bar,Weekend activities,-41.28,0,1127.49,weekend;nightlife
-2025-10-25,Bolt,Transport,-11.81,0,1115.68,transport;weekend;late_night
-2025-10-25,Sushi Bar,Eating out,-34.53,0,1081.15,eating_out;weekend
-2025-10-25,ALDI,Groceries,-55.09,0,1026.06,groceries;weekend
-2025-10-26,Local Market,Groceries,-43.0,0,983.06,groceries;weekend
-2025-10-26,Bolt,Transport,-28.3,0,954.76,transport;weekend;late_night
-2025-10-27,REWE,Groceries,-46.23,0,908.53,groceries
-2025-10-28,Coffee & Bagel,Eating out,-21.13,0,887.4,eating_out
-2025-10-29,Carrefour,Groceries,-38.74,0,848.66,groceries
-2025-10-31,Bolt,Transport,-22.94,0,825.72,transport;weekend;late_night
-2025-11-01,Fuel Station,Transport,-5.23,0,820.49,transport;weekend
-2025-11-01,Employer Payroll,Income,2850.0,1,3670.49,salary;recurring
-2025-11-02,Landlord / Rent,Rent,-1200.0,1,2470.49,rent;recurring
-2025-11-02,Pizza Place,Eating out,-52.69,0,2417.8,eating_out;weekend
-2025-11-03,Carrefour,Groceries,-47.85,0,2369.95,groceries
-2025-11-04,Spotify,Subscriptions,-10.99,1,2358.96,subscription;recurring
-2025-11-04,Lidl,Groceries,-50.25,0,2308.71,groceries
-2025-11-05,Lidl,Groceries,-49.78,0,2258.93,groceries
-2025-11-07,Netflix,Subscriptions,-13.49,1,2245.44,subscription;recurring
-2025-11-07,Budget Airline,Travel,-129.0,0,2116.44,travel;weekend
-2025-11-07,Bus,Transport,-7.92,0,2108.52,transport;weekend
-2025-11-07,Lidl,Groceries,-39.71,0,2068.81,groceries;weekend
-2025-11-07,Museum,Travel,-12.93,0,2055.88,travel;weekend
-2025-11-08,ALDI,Groceries,-27.74,0,2028.14,groceries;weekend
-2025-11-08,Steak & Co,Eating out,-26.14,0,2002.0,eating_out;weekend
-2025-11-08,Cocktail Bar,Weekend activities,-107.36,0,1894.64,weekend;nightlife
-2025-11-08,Museum,Travel,-22.09,0,1872.55,travel;weekend
-2025-11-09,Steak & Co,Eating out,-33.42,0,1839.13,eating_out;weekend
-2025-11-09,Bolt,Transport,-17.76,0,1821.37,transport;weekend;late_night
-2025-11-09,Hotel,Travel,-179.0,0,1642.37,travel;weekend
-2025-11-09,Coffee on the go,Travel,-40.91,0,1601.46,travel;weekend
-2025-11-10,Phone Plan,Subscriptions,-24.9,1,1576.56,subscription;recurring
-2025-11-10,Carrefour,Groceries,-14.2,0,1562.36,groceries
-2025-11-13,Meal Deal,Eating out,-11.89,0,1550.47,eating_out;cheap_meal
-2025-11-14,Gym Membership,Subscriptions,-44.9,1,1505.57,subscription;recurring
-2025-11-14,Fuel Station,Transport,-4.58,0,1500.99,transport;weekend
-2025-11-15,Metro,Transport,-7.51,0,1493.48,transport;weekend
-2025-11-16,Metro,Transport,-4.51,0,1488.97,transport;weekend
-2025-11-18,Cloud Storage,Subscriptions,-2.99,1,1485.98,subscription;recurring
-2025-11-18,Local Market,Groceries,-17.88,0,1468.1,groceries
-2025-11-19,Tesco,Groceries,-18.09,0,1450.01,groceries
-2025-11-20,Tesco,Groceries,-51.25,0,1398.76,groceries
-2025-11-20,Metro,Transport,-3.96,0,1394.8,transport
-2025-11-21,Local Market,Groceries,-53.15,0,1341.65,groceries;weekend
-2025-11-21,Sushi Bar,Eating out,-63.53,0,1278.12,eating_out;weekend
-2025-11-21,Cocktail Bar,Weekend activities,-53.06,0,1225.06,weekend;nightlife
-2025-11-22,Insurance,Subscriptions,-38.5,1,1186.56,subscription;recurring
-2025-11-23,REWE,Groceries,-49.98,0,1136.58,groceries;weekend
-2025-11-23,Sushi Bar,Eating out,-45.05,0,1091.53,eating_out;weekend
-2025-11-23,Uber,Transport,-16.14,0,1075.39,transport;weekend;late_night
-2025-11-25,Soup & Salad,Eating out,-10.56,0,1064.83,eating_out;cheap_meal
-2025-11-26,Coffee & Bagel,Eating out,-17.09,0,1047.74,eating_out
-2025-11-27,ALDI,Groceries,-44.13,0,1003.61,groceries
-2025-11-28,Sports Event,Weekend activities,-57.34,0,946.27,weekend;nightlife
-2025-11-28,Late-Night Kebab,Eating out,-22.28,0,923.99,eating_out;weekend
-2025-11-28,Uber,Transport,-11.05,0,912.94,transport;weekend;late_night
-2025-11-29,Carrefour,Groceries,-19.01,0,893.93,groceries;weekend
-2025-11-29,Pizza Place,Eating out,-27.22,0,866.71,eating_out;weekend
-2025-11-30,Tesco,Groceries,-17.89,0,848.82,groceries;weekend
-2025-11-30,Late-Night Kebab,Eating out,-37.63,0,811.19,eating_out;weekend
-2025-11-30,Taxi,Transport,-27.52,0,783.67,transport;weekend;late_night
-2025-12-01,Employer Payroll,Income,2850.0,1,3633.67,salary;recurring
-2025-12-01,Soup & Salad,Eating out,-9.39,0,3624.28,eating_out;cheap_meal
-2025-12-02,Landlord / Rent,Rent,-1200.0,1,2424.28,rent;recurring
-2025-12-04,Spotify,Subscriptions,-10.99,1,2413.29,subscription;recurring
-2025-12-04,Carrefour,Groceries,-46.44,0,2366.85,groceries
-2025-12-05,Burger House,Eating out,-50.52,0,2316.33,eating_out;weekend
-2025-12-06,Late-Night Kebab,Eating out,-46.96,0,2269.37,eating_out;weekend
-2025-12-06,Uber,Transport,-23.64,0,2245.73,transport;weekend;late_night
-2025-12-06,Concert Tickets,Weekend activities,-116.72,0,2129.01,weekend;nightlife
-2025-12-07,Sports Event,Weekend activities,-62.38,0,2066.63,weekend;nightlife
-2025-12-07,Fuel Station,Transport,-7.22,0,2059.41,transport;weekend
-2025-12-07,Lidl,Groceries,-24.73,0,2034.68,groceries;weekend
-2025-12-07,Netflix,Subscriptions,-13.49,1,2021.19,subscription;recurring
-2025-12-08,Lidl,Groceries,-41.75,0,1979.44,groceries
-2025-12-09,Carrefour,Groceries,-18.18,0,1961.26,groceries
-2025-12-10,Phone Plan,Subscriptions,-24.9,1,1936.36,subscription;recurring
-2025-12-11,ALDI,Groceries,-20.06,0,1916.3,groceries
-2025-12-12,Pizza Place,Eating out,-50.69,0,1865.61,eating_out;weekend
-2025-12-13,Sushi Bar,Eating out,-41.5,0,1824.11,eating_out;weekend
-2025-12-13,Fuel Station,Transport,-6.54,0,1817.57,transport;weekend
-2025-12-13,Night Out,Weekend activities,-86.54,0,1731.03,weekend;nightlife
-2025-12-14,Gym Membership,Subscriptions,-44.9,1,1686.13,subscription;recurring
-2025-12-14,Pizza Place,Eating out,-29.81,0,1656.32,eating_out;weekend
-2025-12-14,Bus,Transport,-6.31,0,1650.01,transport;weekend
-2025-12-14,Cocktail Bar,Weekend activities,-65.14,0,1584.87,weekend;nightlife
-2025-12-15,Metro,Transport,-7.44,0,1577.43,transport
-2025-12-17,REWE,Groceries,-18.64,0,1558.79,groceries
-2025-12-18,Cloud Storage,Subscriptions,-2.99,1,1555.8,subscription;recurring
-2025-12-19,Brunch Spot,Eating out,-40.61,0,1515.19,eating_out;weekend
-2025-12-19,Bolt,Transport,-11.81,0,1503.38,transport;weekend;late_night
-2025-12-20,Sushi Bar,Eating out,-33.51,0,1469.87,eating_out;weekend
-2025-12-20,Bottle Service,Weekend activities,-87.88,0,1381.99,weekend;nightlife
-2025-12-20,Gadget Store,Shopping,-115.99,0,1266.0,shopping;impulse;weekend
-2025-12-21,Sushi Bar,Eating out,-20.76,0,1245.24,eating_out;weekend
-2025-12-21,Taxi,Transport,-23.54,0,1221.7,transport;weekend;late_night
-2025-12-22,Insurance,Subscriptions,-38.5,1,1183.2,subscription;recurring
-2025-12-24,Coffee & Bagel,Eating out,-17.25,0,1165.95,eating_out
-2025-12-25,Lidl,Groceries,-27.31,0,1138.64,groceries
-2025-12-25,Cafe,Eating out,-11.31,0,1127.33,eating_out
-2025-12-26,Lidl,Groceries,-54.0,0,1073.33,groceries;weekend
-2025-12-26,Brunch Spot,Eating out,-50.94,0,1022.39,eating_out;weekend
-2025-12-26,Club Entry,Weekend activities,-66.86,0,955.53,weekend;nightlife
-2025-12-27,Taxi,Transport,-15.84,0,939.69,transport;weekend;late_night
-2025-12-28,Sushi Bar,Eating out,-23.94,0,915.75,eating_out;weekend
-2025-12-28,Lidl,Groceries,-19.16,0,896.59,groceries;weekend
-2025-12-29,Carrefour,Groceries,-53.74,0,842.85,groceries
-2025-12-29,Lunch Bistro,Eating out,-16.98,0,825.87,eating_out
-2025-12-30,Coffee & Bagel,Eating out,-22.78,0,803.09,eating_out
-2025-12-31,Tram,Transport,-3.65,0,799.44,transport
-2026-01-01,Employer Payroll,Income,2850.0,1,3649.44,salary;recurring
-2026-01-01,Bus,Transport,-5.82,0,3643.62,transport
-2026-01-02,Local Market,Groceries,-37.98,0,3605.64,groceries;weekend
-2026-01-02,Landlord / Rent,Rent,-1200.0,1,2405.64,rent;recurring
-2026-01-02,Sushi Bar,Eating out,-32.53,0,2373.11,eating_out;weekend
-2026-01-02,Night Out,Weekend activities,-74.33,0,2298.78,weekend;nightlife
-2026-01-04,Spotify,Subscriptions,-10.99,1,2287.79,subscription;recurring
-2026-01-04,Concert Tickets,Weekend activities,-108.2,0,2179.59,weekend;nightlife
-2026-01-05,Lidl,Groceries,-47.32,0,2132.27,groceries
-2026-01-06,Lidl,Groceries,-51.93,0,2080.34,groceries
-2026-01-07,Tesco,Groceries,-23.47,0,2056.87,groceries
-2026-01-07,Netflix,Subscriptions,-13.49,1,2043.38,subscription;recurring
-2026-01-09,Local Market,Groceries,-15.7,0,2027.68,groceries;weekend
-2026-01-09,Cocktail Bar,Weekend activities,-109.88,0,1917.8,weekend;nightlife
-2026-01-09,Late-Night Kebab,Eating out,-47.75,0,1870.05,eating_out;weekend
-2026-01-10,Phone Plan,Subscriptions,-24.9,1,1845.15,subscription;recurring
-2026-01-10,Lidl,Groceries,-36.14,0,1809.01,groceries;weekend
-2026-01-11,REWE,Groceries,-20.83,0,1788.18,groceries;weekend
-2026-01-11,Tram,Transport,-2.22,0,1785.96,transport;weekend
-2026-01-11,Concert Tickets,Weekend activities,-70.45,0,1715.51,weekend;nightlife
-2026-01-12,Coffee & Bagel,Eating out,-16.56,0,1698.95,eating_out
-2026-01-13,Tram,Transport,-4.83,0,1694.12,transport
-2026-01-14,Gift Shop,Gifts,-120.0,0,1574.12,birthday;planned_event
-2026-01-14,Fuel Station,Transport,-4.39,0,1569.73,transport
-2026-01-14,Gym Membership,Subscriptions,-44.9,1,1524.83,subscription;recurring
-2026-01-14,Lunch Bistro,Eating out,-16.67,0,1508.16,eating_out
-2026-01-16,Sushi Bar,Eating out,-32.2,0,1475.96,eating_out;weekend
-2026-01-16,Bottle Service,Weekend activities,-89.95,0,1386.01,weekend;nightlife
-2026-01-18,Cloud Storage,Subscriptions,-2.99,1,1383.02,subscription;recurring
-2026-01-18,Pizza Place,Eating out,-28.66,0,1354.36,eating_out;weekend
-2026-01-20,Tram,Transport,-2.55,0,1351.81,transport
-2026-01-22,Tesco,Groceries,-50.99,0,1300.82,groceries
-2026-01-22,Insurance,Subscriptions,-38.5,1,1262.32,subscription;recurring
-2026-01-23,Metro,Transport,-4.0,0,1258.32,transport;weekend
-2026-01-24,Tesco,Groceries,-15.75,0,1242.57,groceries;weekend
-2026-01-24,Night Out,Weekend activities,-186.09,0,1056.48,weekend;nightlife
-2026-01-25,Uber,Transport,-35.72,0,1020.76,transport;weekend;late_night
-2026-01-30,Lidl,Groceries,-52.4,0,968.36,groceries;weekend
-2026-01-30,Steak & Co,Eating out,-26.18,0,942.18,eating_out;weekend
-2026-01-30,Bolt,Transport,-31.98,0,910.2,transport;weekend;late_night
-2026-01-30,Sports Event,Weekend activities,-48.26,0,861.94,weekend;nightlife
-2026-01-31,Local Market,Groceries,-47.02,0,814.92,groceries;weekend
-2026-02-01,Employer Payroll,Income,2850.0,1,3664.92,salary;recurring
-2026-02-01,Local Market,Groceries,-35.9,0,3629.02,groceries;weekend
-2026-02-01,Burger House,Eating out,-37.97,0,3591.05,eating_out;weekend
-2026-02-01,Fuel Station,Transport,-9.08,0,3581.97,transport;weekend
-2026-02-02,Landlord / Rent,Rent,-1200.0,1,2381.97,rent;recurring
-2026-02-04,Gadget Store,Shopping,-45.61,0,2336.36,shopping;impulse
-2026-02-04,Metro,Transport,-6.78,0,2329.58,transport
-2026-02-04,ALDI,Groceries,-37.92,0,2291.66,groceries
-2026-02-04,Spotify,Subscriptions,-10.99,1,2280.67,subscription;recurring
-2026-02-05,REWE,Groceries,-30.59,0,2250.08,groceries
-2026-02-05,Bus,Transport,-4.11,0,2245.97,transport
-2026-02-06,Local Market,Groceries,-23.85,0,2222.12,groceries;weekend
-2026-02-06,Sushi Bar,Eating out,-45.24,0,2176.88,eating_out;weekend
-2026-02-07,Netflix,Subscriptions,-13.49,1,2163.39,subscription;recurring
-2026-02-07,Sushi Bar,Eating out,-26.82,0,2136.57,eating_out;weekend
-2026-02-07,Sports Event,Weekend activities,-141.37,0,1995.2,weekend;nightlife
-2026-02-08,ALDI,Groceries,-20.19,0,1975.01,groceries;weekend
-2026-02-10,Phone Plan,Subscriptions,-24.9,1,1950.11,subscription;recurring
-2026-02-10,REWE,Groceries,-43.2,0,1906.91,groceries
-2026-02-10,Soup & Salad,Eating out,-15.75,0,1891.16,eating_out;cheap_meal
-2026-02-10,Jacket Store,Shopping,-189.0,0,1702.16,shopping;impulse;what_if_candidate;jacket
-2026-02-12,Bus,Transport,-4.84,0,1697.32,transport
-2026-02-13,Uber,Transport,-23.95,0,1673.37,transport;weekend;late_night
-2026-02-14,Night Out,Weekend activities,-192.03,0,1481.34,weekend;nightlife
-2026-02-14,Gym Membership,Subscriptions,-44.9,1,1436.44,subscription;recurring
-2026-02-15,Steak & Co,Eating out,-58.84,0,1377.6,eating_out;weekend
-2026-02-15,Bus,Transport,-7.89,0,1369.71,transport;weekend
-2026-02-16,Tesco,Groceries,-16.22,0,1353.49,groceries
-2026-02-18,Cloud Storage,Subscriptions,-2.99,1,1350.5,subscription;recurring
-2026-02-19,Tesco,Groceries,-15.38,0,1335.12,groceries
-2026-02-20,Lidl,Groceries,-41.16,0,1293.96,groceries;weekend
-2026-02-20,Metro,Transport,-10.05,0,1283.91,transport;weekend
-2026-02-21,Sports Event,Weekend activities,-70.31,0,1213.6,weekend;nightlife
-2026-02-21,Electronics,Shopping,-107.64,0,1105.96,shopping;impulse;weekend
-2026-02-21,Big Night Out,Weekend activities,-240.0,0,865.96,weekend;nightlife;overspend
-2026-02-22,Uber,Transport,-24.48,0,841.48,transport;weekend;late_night
-2026-02-22,Pizza Place,Eating out,-88.89,0,752.59,eating_out;weekend
-2026-02-22,Insurance,Subscriptions,-38.5,1,714.09,subscription;recurring
-2026-02-23,Tesco,Groceries,-31.28,0,682.81,groceries
-2026-02-24,Credit Card Repayment,Bills,-620.0,0,62.81,card_bill;known_commitment;irregular_repeating
-2026-02-26,ALDI,Groceries,-39.85,0,22.96,groceries
-2026-02-27,Carrefour,Groceries,-39.59,0,-16.63,groceries;weekend
-2026-02-27,Metro,Transport,-7.85,0,-24.48,transport;weekend
-2026-02-28,Brunch Spot,Eating out,-80.47,0,-104.95,eating_out;weekend
-2026-02-28,Bus,Transport,-5.28,0,-110.23,transport;weekend
+2025-09-01,Carrefour,Groceries,-32.97,0,837.0300000000002,groceries
+2025-09-01,Fuel Station,Transport,-2.6,0,834.4299999999998,transport
+2025-09-01,Soup & Salad,Eating out,-11.57,0,822.8600000000001,eating_out;cheap_meal
+2025-09-01,Employer Payroll,Income,2850.0,1,3672.8599999999997,salary;recurring
+2025-09-02,Local Market,Groceries,-33.43,0,3639.4300000000003,groceries
+2025-09-02,Landlord / Rent,Rent,-1200.0,1,2439.4300000000003,rent;recurring
+2025-09-04,Spotify,Subscriptions,-10.99,1,2428.4399999999996,subscription;recurring
+2025-09-05,Steak & Co,Eating out,-49.95,0,2378.49,eating_out;weekend
+2025-09-06,Burger House,Eating out,-22.49,0,2356.0,eating_out;weekend
+2025-09-06,Cocktail Bar,Weekend activities,-54.75,0,2301.25,weekend;nightlife
+2025-09-07,Lidl,Groceries,-15.26,0,2285.99,groceries;weekend
+2025-09-07,Steak & Co,Eating out,-36.67,0,2249.3199999999997,eating_out;weekend
+2025-09-07,Netflix,Subscriptions,-13.49,1,2235.83,subscription;recurring
+2025-09-08,Tesco,Groceries,-20.07,0,2215.76,groceries
+2025-09-09,Lidl,Groceries,-15.29,0,2200.4700000000003,groceries
+2025-09-10,Phone Plan,Subscriptions,-24.9,1,2175.5699999999997,subscription;recurring
+2025-09-10,Lunch Bistro,Eating out,-17.46,0,2158.1099999999997,eating_out
+2025-09-10,Local Market,Groceries,-20.56,0,2137.55,groceries
+2025-09-11,ALDI,Groceries,-36.74,0,2100.8100000000004,groceries
+2025-09-11,Tram,Transport,-6.79,0,2094.0200000000004,transport
+2025-09-12,Lidl,Groceries,-25.13,0,2068.8900000000003,groceries;weekend
+2025-09-13,Online Shop,Shopping,-28.09,0,2040.8000000000002,shopping;impulse;weekend
+2025-09-13,Taxi,Transport,-17.49,0,2023.3100000000004,transport;weekend;late_night
+2025-09-13,Tesco,Groceries,-23.81,0,1999.5,groceries;weekend
+2025-09-14,Tesco,Groceries,-46.12,0,1953.38,groceries;weekend
+2025-09-14,Gym Membership,Subscriptions,-44.9,1,1908.4799999999996,subscription;recurring
+2025-09-15,Metro,Transport,-5.68,0,1902.8000000000002,transport
+2025-09-17,ALDI,Groceries,-20.2,0,1882.6000000000004,groceries
+2025-09-17,Fuel Station,Transport,-3.31,0,1879.29,transport
+2025-09-18,Bus,Transport,-4.89,0,1874.3999999999996,transport
+2025-09-18,Cloud Storage,Subscriptions,-2.99,1,1871.4099999999999,subscription;recurring
+2025-09-19,Pizza Place,Eating out,-20.09,0,1851.3199999999997,eating_out;weekend
+2025-09-20,Brunch Spot,Eating out,-25.06,0,1826.2600000000002,eating_out;weekend
+2025-09-20,Cocktail Bar,Weekend activities,-100.27,0,1725.9899999999998,weekend;nightlife
+2025-09-20,Bolt,Transport,-33.64,0,1692.35,transport;weekend;late_night
+2025-09-21,Late-Night Kebab,Eating out,-61.55,0,1630.8000000000002,eating_out;weekend
+2025-09-21,Taxi,Transport,-10.33,0,1620.4699999999998,transport;weekend;late_night
+2025-09-22,Insurance,Subscriptions,-38.5,1,1581.9699999999998,subscription;recurring
+2025-09-23,ALDI,Groceries,-20.78,0,1561.19,groceries
+2025-09-26,Concert Tickets,Weekend activities,-132.94,0,1428.25,weekend;nightlife
+2025-09-27,Pizza Place,Eating out,-26.37,0,1401.88,eating_out;weekend
+2025-09-28,Metro,Transport,-4.19,0,1397.69,transport;weekend
+2025-09-28,Steak & Co,Eating out,-52.82,0,1344.87,eating_out;weekend
+2025-09-30,Cafe,Eating out,-23.03,0,1321.8400000000001,eating_out
+2025-10-01,Fuel Station,Transport,-7.23,0,1314.6100000000001,transport
+2025-10-01,Employer Payroll,Income,2850.0,1,4164.61,salary;recurring
+2025-10-02,Landlord / Rent,Rent,-1200.0,1,2964.6099999999997,rent;recurring
+2025-10-03,Night Out,Weekend activities,-36.15,0,2928.46,weekend;nightlife
+2025-10-03,Tesco,Groceries,-37.44,0,2891.0200000000004,groceries;weekend
+2025-10-03,Bolt,Transport,-32.28,0,2858.74,transport;weekend;late_night
+2025-10-03,Brunch Spot,Eating out,-46.53,0,2812.21,eating_out;weekend
+2025-10-04,Spotify,Subscriptions,-10.99,1,2801.2200000000003,subscription;recurring
+2025-10-04,Tesco,Groceries,-51.66,0,2749.5600000000004,groceries;weekend
+2025-10-04,Bus,Transport,-5.16,0,2744.3999999999996,transport;weekend
+2025-10-04,Cocktail Bar,Weekend activities,-66.6,0,2677.8,weekend;nightlife
+2025-10-04,Steak & Co,Eating out,-24.49,0,2653.3100000000004,eating_out;weekend
+2025-10-05,Night Out,Weekend activities,-50.91,0,2602.3999999999996,weekend;nightlife
+2025-10-06,Lidl,Groceries,-16.03,0,2586.37,groceries
+2025-10-07,Lidl,Groceries,-15.71,0,2570.66,groceries
+2025-10-07,Netflix,Subscriptions,-13.49,1,2557.17,subscription;recurring
+2025-10-08,Tesco,Groceries,-47.72,0,2509.45,groceries
+2025-10-09,Coffee & Bagel,Eating out,-22.95,0,2486.5,eating_out
+2025-10-09,Local Market,Groceries,-35.86,0,2450.6400000000003,groceries
+2025-10-10,Phone Plan,Subscriptions,-24.9,1,2425.74,subscription;recurring
+2025-10-11,Local Market,Groceries,-20.96,0,2404.7799999999997,groceries;weekend
+2025-10-11,Burger House,Eating out,-56.92,0,2347.8599999999997,eating_out;weekend
+2025-10-12,Club Entry,Weekend activities,-94.41,0,2253.45,weekend;nightlife
+2025-10-12,Tram,Transport,-4.83,0,2248.62,transport;weekend
+2025-10-12,Burger House,Eating out,-44.31,0,2204.3100000000004,eating_out;weekend
+2025-10-13,REWE,Groceries,-28.87,0,2175.4399999999996,groceries
+2025-10-14,Gym Membership,Subscriptions,-44.9,1,2130.54,subscription;recurring
+2025-10-15,Tram,Transport,-6.75,0,2123.79,transport
+2025-10-16,Lidl,Groceries,-31.73,0,2092.0600000000004,groceries
+2025-10-17,Club Entry,Weekend activities,-94.86,0,1997.1999999999998,weekend;nightlife
+2025-10-17,Fuel Station,Transport,-1.91,0,1995.29,transport;weekend
+2025-10-17,REWE,Groceries,-14.43,0,1980.8599999999997,groceries;weekend
+2025-10-17,Sushi Bar,Eating out,-46.64,0,1934.2200000000003,eating_out;weekend
+2025-10-18,Cloud Storage,Subscriptions,-2.99,1,1931.2299999999996,subscription;recurring
+2025-10-18,Sports Event,Weekend activities,-73.4,0,1857.83,weekend;nightlife
+2025-10-18,Burger House,Eating out,-65.93,0,1791.8999999999996,eating_out;weekend
+2025-10-18,Bolt,Transport,-9.06,0,1782.8400000000001,transport;weekend;late_night
+2025-10-18,ALDI,Groceries,-26.81,0,1756.0299999999997,groceries;weekend
+2025-10-22,ALDI,Groceries,-23.27,0,1732.7600000000002,groceries
+2025-10-22,Insurance,Subscriptions,-38.5,1,1694.2600000000002,subscription;recurring
+2025-10-23,Metro,Transport,-6.01,0,1688.25,transport
+2025-10-24,Concert Tickets,Weekend activities,-38.12,0,1650.13,weekend;nightlife
+2025-10-24,Uber,Transport,-31.36,0,1618.77,transport;weekend;late_night
+2025-10-25,Sushi Bar,Eating out,-34.53,0,1584.2399999999998,eating_out;weekend
+2025-10-25,Cocktail Bar,Weekend activities,-41.28,0,1542.96,weekend;nightlife
+2025-10-25,Bolt,Transport,-11.81,0,1531.15,transport;weekend;late_night
+2025-10-25,ALDI,Groceries,-55.09,0,1476.06,groceries;weekend
+2025-10-26,Bolt,Transport,-28.3,0,1447.7600000000002,transport;weekend;late_night
+2025-10-26,Local Market,Groceries,-43.0,0,1404.7600000000002,groceries;weekend
+2025-10-27,REWE,Groceries,-46.23,0,1358.5300000000002,groceries
+2025-10-28,Coffee & Bagel,Eating out,-21.13,0,1337.4,eating_out
+2025-10-29,Carrefour,Groceries,-38.74,0,1298.6599999999999,groceries
+2025-10-31,Bolt,Transport,-22.94,0,1275.7199999999998,transport;weekend;late_night
+2025-11-01,Employer Payroll,Income,2850.0,1,4125.72,salary;recurring
+2025-11-01,Fuel Station,Transport,-5.23,0,4120.49,transport;weekend
+2025-11-02,Pizza Place,Eating out,-52.69,0,4067.8,eating_out;weekend
+2025-11-02,Landlord / Rent,Rent,-1200.0,1,2867.8,rent;recurring
+2025-11-03,Carrefour,Groceries,-47.85,0,2819.95,groceries
+2025-11-04,Lidl,Groceries,-50.25,0,2769.7,groceries
+2025-11-04,Spotify,Subscriptions,-10.99,1,2758.71,subscription;recurring
+2025-11-05,Lidl,Groceries,-49.78,0,2708.9300000000003,groceries
+2025-11-07,Netflix,Subscriptions,-13.49,1,2695.4399999999996,subscription;recurring
+2025-11-07,Museum,Travel,-12.93,0,2682.51,travel;weekend
+2025-11-07,Budget Airline,Travel,-129.0,0,2553.51,travel;weekend
+2025-11-07,Bus,Transport,-7.92,0,2545.59,transport;weekend
+2025-11-07,Lidl,Groceries,-39.71,0,2505.88,groceries;weekend
+2025-11-08,ALDI,Groceries,-27.74,0,2478.1400000000003,groceries;weekend
+2025-11-08,Cocktail Bar,Weekend activities,-107.36,0,2370.7799999999997,weekend;nightlife
+2025-11-08,Museum,Travel,-22.09,0,2348.6899999999996,travel;weekend
+2025-11-08,Steak & Co,Eating out,-26.14,0,2322.55,eating_out;weekend
+2025-11-09,Bolt,Transport,-17.76,0,2304.79,transport;weekend;late_night
+2025-11-09,Coffee on the go,Travel,-40.91,0,2263.88,travel;weekend
+2025-11-09,Hotel,Travel,-179.0,0,2084.88,travel;weekend
+2025-11-09,Steak & Co,Eating out,-33.42,0,2051.46,eating_out;weekend
+2025-11-10,Carrefour,Groceries,-14.2,0,2037.2600000000002,groceries
+2025-11-10,Phone Plan,Subscriptions,-24.9,1,2012.3599999999997,subscription;recurring
+2025-11-13,Meal Deal,Eating out,-11.89,0,2000.4700000000003,eating_out;cheap_meal
+2025-11-14,Fuel Station,Transport,-4.58,0,1995.8900000000003,transport;weekend
+2025-11-14,Gym Membership,Subscriptions,-44.9,1,1950.9899999999998,subscription;recurring
+2025-11-15,Metro,Transport,-7.51,0,1943.4799999999996,transport;weekend
+2025-11-16,Metro,Transport,-4.51,0,1938.9700000000003,transport;weekend
+2025-11-18,Local Market,Groceries,-17.88,0,1921.0900000000001,groceries
+2025-11-18,Cloud Storage,Subscriptions,-2.99,1,1918.1000000000004,subscription;recurring
+2025-11-19,Tesco,Groceries,-18.09,0,1900.0100000000002,groceries
+2025-11-20,Metro,Transport,-3.96,0,1896.0500000000002,transport
+2025-11-20,Tesco,Groceries,-51.25,0,1844.8000000000002,groceries
+2025-11-21,Cocktail Bar,Weekend activities,-53.06,0,1791.7399999999998,weekend;nightlife
+2025-11-21,Local Market,Groceries,-53.15,0,1738.5900000000001,groceries;weekend
+2025-11-21,Sushi Bar,Eating out,-63.53,0,1675.06,eating_out;weekend
+2025-11-22,Insurance,Subscriptions,-38.5,1,1636.56,subscription;recurring
+2025-11-23,REWE,Groceries,-49.98,0,1586.58,groceries;weekend
+2025-11-23,Sushi Bar,Eating out,-45.05,0,1541.5300000000002,eating_out;weekend
+2025-11-23,Uber,Transport,-16.14,0,1525.3899999999999,transport;weekend;late_night
+2025-11-25,Soup & Salad,Eating out,-10.56,0,1514.83,eating_out;cheap_meal
+2025-11-26,Coffee & Bagel,Eating out,-17.09,0,1497.7399999999998,eating_out
+2025-11-27,ALDI,Groceries,-44.13,0,1453.6100000000001,groceries
+2025-11-28,Sports Event,Weekend activities,-57.34,0,1396.27,weekend;nightlife
+2025-11-28,Uber,Transport,-11.05,0,1385.2199999999998,transport;weekend;late_night
+2025-11-28,Late-Night Kebab,Eating out,-22.28,0,1362.94,eating_out;weekend
+2025-11-29,Carrefour,Groceries,-19.01,0,1343.9299999999998,groceries;weekend
+2025-11-29,Pizza Place,Eating out,-27.22,0,1316.71,eating_out;weekend
+2025-11-30,Late-Night Kebab,Eating out,-37.63,0,1279.08,eating_out;weekend
+2025-11-30,Taxi,Transport,-27.52,0,1251.56,transport;weekend;late_night
+2025-11-30,Tesco,Groceries,-17.89,0,1233.67,groceries;weekend
+2025-12-01,Soup & Salad,Eating out,-9.39,0,1224.2800000000002,eating_out;cheap_meal
+2025-12-01,Employer Payroll,Income,2850.0,1,4074.2799999999997,salary;recurring
+2025-12-02,Landlord / Rent,Rent,-1200.0,1,2874.2799999999997,rent;recurring
+2025-12-04,Carrefour,Groceries,-46.44,0,2827.84,groceries
+2025-12-04,Spotify,Subscriptions,-10.99,1,2816.8500000000004,subscription;recurring
+2025-12-05,Burger House,Eating out,-50.52,0,2766.33,eating_out;weekend
+2025-12-06,Concert Tickets,Weekend activities,-116.72,0,2649.6099999999997,weekend;nightlife
+2025-12-06,Late-Night Kebab,Eating out,-46.96,0,2602.6499999999996,eating_out;weekend
+2025-12-06,Uber,Transport,-23.64,0,2579.01,transport;weekend;late_night
+2025-12-07,Netflix,Subscriptions,-13.49,1,2565.5200000000004,subscription;recurring
+2025-12-07,Sports Event,Weekend activities,-62.38,0,2503.1400000000003,weekend;nightlife
+2025-12-07,Lidl,Groceries,-24.73,0,2478.41,groceries;weekend
+2025-12-07,Fuel Station,Transport,-7.22,0,2471.1899999999996,transport;weekend
+2025-12-08,Lidl,Groceries,-41.75,0,2429.4399999999996,groceries
+2025-12-09,Carrefour,Groceries,-18.18,0,2411.26,groceries
+2025-12-10,Phone Plan,Subscriptions,-24.9,1,2386.3599999999997,subscription;recurring
+2025-12-11,ALDI,Groceries,-20.06,0,2366.3,groceries
+2025-12-12,Pizza Place,Eating out,-50.69,0,2315.6099999999997,eating_out;weekend
+2025-12-13,Fuel Station,Transport,-6.54,0,2309.0699999999997,transport;weekend
+2025-12-13,Night Out,Weekend activities,-86.54,0,2222.5299999999997,weekend;nightlife
+2025-12-13,Sushi Bar,Eating out,-41.5,0,2181.0299999999997,eating_out;weekend
+2025-12-14,Bus,Transport,-6.31,0,2174.7200000000003,transport;weekend
+2025-12-14,Cocktail Bar,Weekend activities,-65.14,0,2109.58,weekend;nightlife
+2025-12-14,Pizza Place,Eating out,-29.81,0,2079.7700000000004,eating_out;weekend
+2025-12-14,Gym Membership,Subscriptions,-44.9,1,2034.87,subscription;recurring
+2025-12-15,Metro,Transport,-7.44,0,2027.4300000000003,transport
+2025-12-17,REWE,Groceries,-18.64,0,2008.79,groceries
+2025-12-18,Cloud Storage,Subscriptions,-2.99,1,2005.8000000000002,subscription;recurring
+2025-12-19,Brunch Spot,Eating out,-40.61,0,1965.1899999999996,eating_out;weekend
+2025-12-19,Bolt,Transport,-11.81,0,1953.38,transport;weekend;late_night
+2025-12-20,Bottle Service,Weekend activities,-87.88,0,1865.5,weekend;nightlife
+2025-12-20,Gadget Store,Shopping,-115.99,0,1749.5100000000002,shopping;impulse;weekend
+2025-12-20,Sushi Bar,Eating out,-33.51,0,1716.0,eating_out;weekend
+2025-12-21,Sushi Bar,Eating out,-20.76,0,1695.2399999999998,eating_out;weekend
+2025-12-21,Taxi,Transport,-23.54,0,1671.6999999999998,transport;weekend;late_night
+2025-12-22,Insurance,Subscriptions,-38.5,1,1633.1999999999998,subscription;recurring
+2025-12-24,Coffee & Bagel,Eating out,-17.25,0,1615.9499999999998,eating_out
+2025-12-25,Lidl,Groceries,-27.31,0,1588.6399999999999,groceries
+2025-12-25,Cafe,Eating out,-11.31,0,1577.33,eating_out
+2025-12-26,Brunch Spot,Eating out,-50.94,0,1526.3899999999999,eating_out;weekend
+2025-12-26,Club Entry,Weekend activities,-66.86,0,1459.5300000000002,weekend;nightlife
+2025-12-26,Lidl,Groceries,-54.0,0,1405.5300000000002,groceries;weekend
+2025-12-27,Taxi,Transport,-15.84,0,1389.69,transport;weekend;late_night
+2025-12-28,Lidl,Groceries,-19.16,0,1370.5300000000002,groceries;weekend
+2025-12-28,Sushi Bar,Eating out,-23.94,0,1346.5900000000001,eating_out;weekend
+2025-12-29,Lunch Bistro,Eating out,-16.98,0,1329.6100000000001,eating_out
+2025-12-29,Carrefour,Groceries,-53.74,0,1275.87,groceries
+2025-12-30,Coffee & Bagel,Eating out,-22.78,0,1253.0900000000001,eating_out
+2025-12-31,Tram,Transport,-3.65,0,1249.44,transport
+2026-01-01,Bus,Transport,-5.82,0,1243.62,transport
+2026-01-01,Employer Payroll,Income,2850.0,1,4093.62,salary;recurring
+2026-01-02,Local Market,Groceries,-37.98,0,4055.6400000000003,groceries;weekend
+2026-01-02,Night Out,Weekend activities,-74.33,0,3981.3100000000004,weekend;nightlife
+2026-01-02,Sushi Bar,Eating out,-32.53,0,3948.7799999999997,eating_out;weekend
+2026-01-02,Landlord / Rent,Rent,-1200.0,1,2748.7799999999997,rent;recurring
+2026-01-04,Concert Tickets,Weekend activities,-108.2,0,2640.58,weekend;nightlife
+2026-01-04,Spotify,Subscriptions,-10.99,1,2629.59,subscription;recurring
+2026-01-05,Lidl,Groceries,-47.32,0,2582.2700000000004,groceries
+2026-01-06,Lidl,Groceries,-51.93,0,2530.34,groceries
+2026-01-07,Tesco,Groceries,-23.47,0,2506.87,groceries
+2026-01-07,Netflix,Subscriptions,-13.49,1,2493.38,subscription;recurring
+2026-01-09,Late-Night Kebab,Eating out,-47.75,0,2445.63,eating_out;weekend
+2026-01-09,Local Market,Groceries,-15.7,0,2429.9300000000003,groceries;weekend
+2026-01-09,Cocktail Bar,Weekend activities,-109.88,0,2320.05,weekend;nightlife
+2026-01-10,Phone Plan,Subscriptions,-24.9,1,2295.1499999999996,subscription;recurring
+2026-01-10,Lidl,Groceries,-36.14,0,2259.01,groceries;weekend
+2026-01-11,Concert Tickets,Weekend activities,-70.45,0,2188.5600000000004,weekend;nightlife
+2026-01-11,REWE,Groceries,-20.83,0,2167.7299999999996,groceries;weekend
+2026-01-11,Tram,Transport,-2.22,0,2165.51,transport;weekend
+2026-01-12,Coffee & Bagel,Eating out,-16.56,0,2148.95,eating_out
+2026-01-13,Tram,Transport,-4.83,0,2144.12,transport
+2026-01-14,Lunch Bistro,Eating out,-16.67,0,2127.45,eating_out
+2026-01-14,Gym Membership,Subscriptions,-44.9,1,2082.55,subscription;recurring
+2026-01-14,Fuel Station,Transport,-4.39,0,2078.16,transport
+2026-01-14,Gift Shop,Gifts,-120.0,0,1958.1599999999999,birthday;planned_event
+2026-01-16,Bottle Service,Weekend activities,-89.95,0,1868.21,weekend;nightlife
+2026-01-16,Sushi Bar,Eating out,-32.2,0,1836.0100000000002,eating_out;weekend
+2026-01-18,Pizza Place,Eating out,-28.66,0,1807.3500000000004,eating_out;weekend
+2026-01-18,Cloud Storage,Subscriptions,-2.99,1,1804.3599999999997,subscription;recurring
+2026-01-20,Tram,Transport,-2.55,0,1801.8100000000004,transport
+2026-01-22,Tesco,Groceries,-50.99,0,1750.8199999999997,groceries
+2026-01-22,Insurance,Subscriptions,-38.5,1,1712.3199999999997,subscription;recurring
+2026-01-23,Metro,Transport,-4.0,0,1708.3199999999997,transport;weekend
+2026-01-24,Tesco,Groceries,-15.75,0,1692.5700000000002,groceries;weekend
+2026-01-24,Night Out,Weekend activities,-186.09,0,1506.48,weekend;nightlife
+2026-01-25,Uber,Transport,-35.72,0,1470.7600000000002,transport;weekend;late_night
+2026-01-30,Bolt,Transport,-31.98,0,1438.7800000000002,transport;weekend;late_night
+2026-01-30,Lidl,Groceries,-52.4,0,1386.38,groceries;weekend
+2026-01-30,Sports Event,Weekend activities,-48.26,0,1338.12,weekend;nightlife
+2026-01-30,Steak & Co,Eating out,-26.18,0,1311.94,eating_out;weekend
+2026-01-31,Local Market,Groceries,-47.02,0,1264.92,groceries;weekend
+2026-02-01,Burger House,Eating out,-37.97,0,1226.9499999999998,eating_out;weekend
+2026-02-01,Fuel Station,Transport,-9.08,0,1217.87,transport;weekend
+2026-02-01,Local Market,Groceries,-35.9,0,1181.9699999999998,groceries;weekend
+2026-02-01,Employer Payroll,Income,2850.0,1,4031.9700000000003,salary;recurring
+2026-02-02,Landlord / Rent,Rent,-1200.0,1,2831.9700000000003,rent;recurring
+2026-02-04,ALDI,Groceries,-37.92,0,2794.05,groceries
+2026-02-04,Gadget Store,Shopping,-45.61,0,2748.4399999999996,shopping;impulse
+2026-02-04,Metro,Transport,-6.78,0,2741.66,transport
+2026-02-04,Spotify,Subscriptions,-10.99,1,2730.67,subscription;recurring
+2026-02-05,REWE,Groceries,-30.59,0,2700.08,groceries
+2026-02-05,Bus,Transport,-4.11,0,2695.9700000000003,transport
+2026-02-06,Local Market,Groceries,-23.85,0,2672.12,groceries;weekend
+2026-02-06,Sushi Bar,Eating out,-45.24,0,2626.88,eating_out;weekend
+2026-02-07,Sports Event,Weekend activities,-141.37,0,2485.51,weekend;nightlife
+2026-02-07,Sushi Bar,Eating out,-26.82,0,2458.6899999999996,eating_out;weekend
+2026-02-07,Netflix,Subscriptions,-13.49,1,2445.2,subscription;recurring
+2026-02-08,ALDI,Groceries,-20.19,0,2425.01,groceries;weekend
+2026-02-10,Jacket Store,Shopping,-189.0,0,2236.01,shopping;impulse;what_if_candidate;jacket
+2026-02-10,REWE,Groceries,-43.2,0,2192.8100000000004,groceries
+2026-02-10,Soup & Salad,Eating out,-15.75,0,2177.0600000000004,eating_out;cheap_meal
+2026-02-10,Phone Plan,Subscriptions,-24.9,1,2152.16,subscription;recurring
+2026-02-12,Bus,Transport,-4.84,0,2147.3199999999997,transport
+2026-02-13,Uber,Transport,-23.95,0,2123.37,transport;weekend;late_night
+2026-02-14,Night Out,Weekend activities,-192.03,0,1931.3400000000001,weekend;nightlife
+2026-02-14,Gym Membership,Subscriptions,-44.9,1,1886.4399999999996,subscription;recurring
+2026-02-15,Bus,Transport,-7.89,0,1878.5500000000002,transport;weekend
+2026-02-15,Steak & Co,Eating out,-58.84,0,1819.71,eating_out;weekend
+2026-02-16,Tesco,Groceries,-16.22,0,1803.4899999999998,groceries
+2026-02-18,Cloud Storage,Subscriptions,-2.99,1,1800.5,subscription;recurring
+2026-02-19,Tesco,Groceries,-15.38,0,1785.12,groceries
+2026-02-20,Lidl,Groceries,-41.16,0,1743.96,groceries;weekend
+2026-02-20,Metro,Transport,-10.05,0,1733.9099999999999,transport;weekend
+2026-02-21,Big Night Out,Weekend activities,-240.0,0,1493.9099999999999,weekend;nightlife;overspend
+2026-02-21,Electronics,Shopping,-107.64,0,1386.27,shopping;impulse;weekend
+2026-02-21,Sports Event,Weekend activities,-70.31,0,1315.96,weekend;nightlife
+2026-02-22,Pizza Place,Eating out,-88.89,0,1227.0700000000002,eating_out;weekend
+2026-02-22,Uber,Transport,-24.48,0,1202.5900000000001,transport;weekend;late_night
+2026-02-22,Insurance,Subscriptions,-38.5,1,1164.0900000000001,subscription;recurring
+2026-02-23,Tesco,Groceries,-31.28,0,1132.81,groceries
+2026-02-24,Credit Card Repayment,Bills,-620.0,0,512.81,card_bill;known_commitment;irregular_repeating
+2026-02-25,Freelance payout,Income,1250.0,0,1762.8100000000004,income;freelance;one_off
+2026-02-26,ALDI,Groceries,-39.85,0,1722.96,groceries
+2026-02-27,Carrefour,Groceries,-39.59,0,1683.37,groceries;weekend
+2026-02-27,Metro,Transport,-7.85,0,1675.52,transport;weekend
+2026-02-28,Brunch Spot,Eating out,-80.47,0,1595.0500000000002,eating_out;weekend
+2026-02-28,Bus,Transport,-5.28,0,1589.77,transport;weekend

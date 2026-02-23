@@ -9,6 +9,7 @@ import pandas as pd
 import streamlit as st
 
 from src.analytics import (
+    CATEGORY_LIMITS,
     build_commitments,
     compute_category_spend,
     daily_spend_series,
@@ -18,7 +19,7 @@ from src.analytics import (
     project_balance,
 )
 from src.features import add_calendar_features, add_rolling_features, transactions_to_daily
-from src.suggestions import guardrails_from_flags
+from src.suggestions import generate_shortfall_suggestions, guardrails_from_flags
 
 st.set_page_config(page_title="Money Assistant", layout="wide")
 
@@ -58,20 +59,21 @@ st.markdown(
     }
     .hero-wrap {
         margin-top: 6px;
-        margin-bottom: 16px;
-        padding: 22px 22px 20px 22px;
-        border-radius: 22px;
+        margin-bottom: 10px;
+        padding: 14px 16px 13px 16px;
+        border-radius: 16px;
         background:
             radial-gradient(650px 180px at 0% 0%, rgba(56, 189, 248, 0.20), transparent 60%),
             linear-gradient(160deg, rgba(17, 24, 39, 0.75) 0%, rgba(15, 23, 42, 0.88) 100%);
-        border: 1px solid rgba(148, 163, 184, 0.30);
+        border: 1px solid rgba(148, 163, 184, 0.22);
         backdrop-filter: blur(8px);
     }
     .hero-title {
         margin: 0;
-        font-size: clamp(1.7rem, 2.3vw, 2.8rem);
-        line-height: 1.15;
-        color: #f8fbff;
+        font-size: clamp(1.02rem, 1.35vw, 1.42rem);
+        line-height: 1.3;
+        color: #d7e3ff;
+        font-weight: 600;
     }
     .mobile-shell {
         max-width: 860px;
@@ -95,14 +97,90 @@ st.markdown(
         color: #b9c8ea;
         font-size: 1.18rem;
     }
+    .balance-projection {
+        margin-top: 8px;
+        color: #d5e3ff;
+        font-size: 1rem;
+        font-weight: 600;
+    }
     .event-chip {
         margin-top: 10px;
-        background: rgba(15, 23, 42, 0.55);
-        border: 1px solid rgba(148, 163, 184, 0.22);
+        background: rgba(15, 23, 42, 0.68);
+        border: 1px solid rgba(248, 113, 113, 0.42);
         border-radius: 14px;
-        padding: 10px 12px;
-        color: #d9e3fb;
-        font-size: 0.95rem;
+        padding: 12px 14px;
+        color: #ffe4e6;
+        font-size: 1rem;
+    }
+    .warning-banner {
+        margin-top: 4px;
+        margin-bottom: 14px;
+        border-radius: 18px;
+        padding: 16px 18px;
+        border: 1px solid rgba(252, 165, 165, 0.70);
+        box-shadow: 0 14px 34px rgba(153, 27, 27, 0.25);
+        background: linear-gradient(120deg, rgba(127, 29, 29, 0.84), rgba(185, 28, 28, 0.64));
+        color: #fff1f2;
+    }
+    .warning-title {
+        margin: 0;
+        font-size: clamp(1.3rem, 2.1vw, 2rem);
+        line-height: 1.12;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+    }
+    .warning-sub {
+        margin-top: 8px;
+        font-size: 1.02rem;
+        color: #fee2e2;
+    }
+    .warning-metrics {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .warning-pill {
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: #fff7ed;
+        border: 1px solid rgba(254, 202, 202, 0.55);
+        background: rgba(127, 29, 29, 0.44);
+    }
+    .warning-banner.warning-amber {
+        border-color: rgba(251, 191, 36, 0.66);
+        box-shadow: 0 14px 34px rgba(120, 53, 15, 0.25);
+        background: linear-gradient(120deg, rgba(120, 53, 15, 0.82), rgba(161, 98, 7, 0.58));
+    }
+    .warning-banner.warning-amber .warning-sub {
+        color: #fef3c7;
+    }
+    .warning-banner.warning-blue {
+        border-color: rgba(147, 197, 253, 0.62);
+        box-shadow: 0 14px 34px rgba(30, 58, 138, 0.22);
+        background: linear-gradient(120deg, rgba(30, 58, 138, 0.76), rgba(30, 64, 175, 0.52));
+    }
+    .warning-banner.warning-blue .warning-sub {
+        color: #dbeafe;
+    }
+    .action-card {
+        margin-top: 12px;
+        margin-bottom: 14px;
+        border-radius: 16px;
+        padding: 14px 16px;
+        border: 1px solid rgba(74, 222, 128, 0.44);
+        background: linear-gradient(130deg, rgba(6, 78, 59, 0.50), rgba(15, 23, 42, 0.72));
+        color: #dcfce7;
+    }
+    .action-item {
+        margin-top: 8px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        background: rgba(15, 23, 42, 0.42);
+        border: 1px solid rgba(134, 239, 172, 0.28);
+        font-size: 0.97rem;
     }
     .tile {
         background: linear-gradient(145deg, rgba(18, 26, 44, 0.90), rgba(12, 18, 34, 0.84));
@@ -396,7 +474,7 @@ def _risk_class(risk: str) -> str:
 
 st.markdown("<div class='topbar'>Monthly Money Forecast</div>", unsafe_allow_html=True)
 st.markdown(
-    "<div class='subtitle'>Demo banking co-pilot for habit risk and upcoming obligations</div>",
+    "<div class='subtitle'>Banking co-pilot for habit risk and upcoming obligations</div>",
     unsafe_allow_html=True,
 )
 
@@ -428,11 +506,9 @@ model, meta = load_model_and_meta()
 feature_cols = meta["feature_cols"]
 payday_day = int(meta.get("payday_day", 1))
 
-neg_dates = tx.loc[tx["balance_after"] < 0, "date"]
-if not neg_dates.empty:
-    default_as_of = (neg_dates.iloc[0] - pd.Timedelta(days=1)).date()
-else:
-    default_as_of = tx["date"].max().date()
+latest_date = tx["date"].max().normalize()
+mid_month_candidate = (latest_date.replace(day=1) + pd.Timedelta(days=14)).normalize()
+default_as_of = min(mid_month_candidate, latest_date).date()
 
 as_of = st.sidebar.date_input(
     "As of date",
@@ -451,8 +527,36 @@ monthly_income = infer_monthly_income(tx)
 flagged = cached_flagged_purchases(tx, monthly_income=monthly_income, as_of_dt=as_of_dt)
 category_30 = cached_category_spend(tx, as_of_dt=as_of_dt, days=30)
 
+default_calendar_events = get_demo_calendar_events().copy()
+default_signature = tuple(
+    sorted(
+        (
+            pd.to_datetime(r["date"]).date().isoformat(),
+            str(r["name"]),
+            float(r["amount"]),
+        )
+        for _, r in default_calendar_events.iterrows()
+    )
+)
+
 if "calendar_events" not in st.session_state:
-    st.session_state.calendar_events = get_demo_calendar_events().copy()
+    st.session_state.calendar_events = default_calendar_events.copy()
+    st.session_state._calendar_defaults_signature = default_signature
+else:
+    prev_signature = st.session_state.get("_calendar_defaults_signature")
+    if prev_signature != default_signature:
+        existing_events = st.session_state.calendar_events.copy()
+        if existing_events.empty:
+            manual_events = pd.DataFrame(columns=default_calendar_events.columns)
+        else:
+            existing_events["tag"] = existing_events.get("tag", "").astype(str)
+            manual_events = existing_events[existing_events["tag"].str.lower() == "manual"].copy()
+        merged_events = pd.concat([default_calendar_events, manual_events], ignore_index=True)
+        if not merged_events.empty:
+            merged_events["date"] = pd.to_datetime(merged_events["date"]).dt.normalize()
+            merged_events = merged_events.drop_duplicates(subset=["date", "name"], keep="first").reset_index(drop=True)
+        st.session_state.calendar_events = merged_events
+        st.session_state._calendar_defaults_signature = default_signature
 
 derived_commitments = build_commitments(tx)
 all_events = pd.concat([st.session_state.calendar_events, derived_commitments], ignore_index=True)
@@ -482,9 +586,23 @@ predicted_map = st.session_state.get("_predicted_map", {})
 projection = project_balance(tx=tx, as_of=as_of_dt, predicted_daily_spend=predicted_map, events=all_events)
 full_history_habits = habit_projection_full_history(tx=tx, as_of_dt=as_of_dt)
 
-habit_spend_forecast = float(
+days_left_in_month = max(int((month_end - as_of_dt.normalize()).days), 0)
+habit_spend_forecast_model = float(
     sum(v for d, v in predicted_map.items() if pd.to_datetime(d).normalize() <= month_end)
 )
+habit_spend_forecast = habit_spend_forecast_model
+if days_left_in_month > 0 and habit_spend_forecast_model < 1.0:
+    fallback_history = float(full_history_habits.get("future_habit_spend", 0.0))
+    recent_daily = cached_daily_spend_series(tx)
+    recent_daily = recent_daily[recent_daily["day"] <= as_of_dt].tail(30).copy()
+    baseline_daily = 0.0
+    if not recent_daily.empty:
+        non_zero_days = recent_daily.loc[recent_daily["spend_total"] > 0, "spend_total"]
+        if not non_zero_days.empty:
+            baseline_daily = float(non_zero_days.median())
+    fallback_recent = baseline_daily * days_left_in_month
+    habit_spend_forecast = max(fallback_history, fallback_recent)
+
 upcoming_commitments = float(
     all_events.loc[all_events["date"] <= month_end, "amount"].sum() if not all_events.empty else 0.0
 )
@@ -492,6 +610,15 @@ upcoming_commitments = float(
 next_event = None
 if projection["event_projection"]:
     next_event = sorted(projection["event_projection"], key=lambda x: x["date"])[0]
+
+next_calendar_event = None
+if projection["event_projection"] and not all_events.empty:
+    calendar_events = all_events[all_events["source"] != "derived"][["date", "name", "amount"]].copy()
+    if not calendar_events.empty:
+        ev_proj = pd.DataFrame(projection["event_projection"])
+        calendar_events = calendar_events.merge(ev_proj[["date", "name", "projected_balance"]], on=["date", "name"], how="left")
+        if not calendar_events.empty:
+            next_calendar_event = calendar_events.sort_values("date").iloc[0].to_dict()
 
 guardrails = guardrails_from_flags(
     flagged=flagged,
@@ -505,11 +632,42 @@ risk_cls = _risk_class(projection["risk_state"])
 
 if page == "Home":
     st.markdown("<div class='mobile-shell'>", unsafe_allow_html=True)
+
+    focus_event = next_calendar_event or next_event
+    days_to_focus_event = None
+    projected_at_focus_event = None
+    focus_event_amount = None
+
+    if focus_event is not None:
+        days_to_focus_event = int((pd.to_datetime(focus_event["date"]).normalize() - as_of_dt.normalize()).days)
+        projected_at_focus_event = float(focus_event.get("projected_balance", projection["current_balance"]))
+        focus_event_amount = float(focus_event.get("amount", 0.0))
+
+    action_items: list[str] = []
+    cat_map = {r["category"]: float(r["spend"]) for _, r in category_30.iterrows()} if not category_30.empty else {}
+    weeks_left = max((days_to_focus_event or 28) / 7.0, 1.0)
+    for category, limit in CATEGORY_LIMITS.items():
+        cat_spend = float(cat_map.get(category, 0.0))
+        cap = monthly_income * limit if monthly_income > 0 else 0.0
+        if cap > 0 and cat_spend > cap:
+            over = cat_spend - cap
+            weekly_cut = over / weeks_left
+            action_items.append(
+                f"{category}: you are €{over:,.0f} above your 30-day guideline. Reduce by about €{weekly_cut:,.0f}/week until the next bill."
+            )
+
+    savings_target = max(0.0, -float(projected_at_focus_event)) if projected_at_focus_event is not None else 0.0
+    for idea in generate_shortfall_suggestions(tx, as_of=str(as_of_dt.date()), target_savings=savings_target):
+        if idea not in action_items:
+            action_items.append(idea)
+    action_items = action_items[:4]
+
     st.markdown(
         (
             "<div class='hero-wrap'>"
-            f"<h2 class='hero-title'>Welcome Back Jakob, According to your usual spending habits "
-            f"you have a projected spending this month of €{full_history_habits['projected_month_spend']:,.0f}.</h2>"
+            f"<h2 class='hero-title'>Welcome back Jakob. Based on your habits, you are likely to spend about "
+            f"€{habit_spend_forecast:,.0f} over the next {days_left_in_month} day(s) "
+            f"(from {(as_of_dt + pd.Timedelta(days=1)).date()} to {month_end.date()}).</h2>"
             "</div>"
         ),
         unsafe_allow_html=True,
@@ -519,10 +677,48 @@ if page == "Home":
             "<div class='balance-hero'>"
             f"<div class='balance-value'>€{projection['current_balance']:,.2f}</div>"
             "<div class='balance-label'>Current Balance</div>"
+            f"<div class='balance-projection'>End-of-month projection: €{projection['projected_end_balance']:,.2f}</div>"
             "</div>"
         ),
         unsafe_allow_html=True,
     )
+
+    if focus_event is not None:
+        projected_at_event = projected_at_focus_event
+        event_amount = focus_event_amount
+        if projected_at_event < 0:
+            warning_title = f"High-risk alert: {focus_event['name']} may not be covered"
+            warning_class = ""
+        elif projected_at_event < event_amount * 0.5:
+            warning_title = f"Warning: low buffer before {focus_event['name']}"
+            warning_class = "warning-amber"
+        else:
+            warning_title = f"Upcoming event: {focus_event['name']}"
+            warning_class = "warning-blue"
+
+        st.markdown(
+            (
+                f"<div class='warning-banner {warning_class}'>"
+                f"<h3 class='warning-title'>{warning_title}</h3>"
+                f"<div class='warning-sub'>"
+                f"In {max(days_to_focus_event, 0)} day(s), "
+                f"{focus_event['name']} is expected to charge €{event_amount:,.0f}. "
+                f"Projected balance at that point: €{projected_at_event:,.2f}."
+                "</div>"
+                "<div class='warning-metrics'>"
+                f"<span class='warning-pill'>Event date: {pd.to_datetime(focus_event['date']).date()}</span>"
+                f"<span class='warning-pill'>Amount: €{event_amount:,.0f}</span>"
+                f"<span class='warning-pill'>Projected balance then: €{projected_at_event:,.2f}</span>"
+                "</div>"
+                "</div>"
+            ),
+            unsafe_allow_html=True,
+        )
+
+    if action_items:
+        action_html = "".join([f"<div class='action-item'>{item}</div>" for item in action_items])
+        st.markdown("<div class='section-title'>Action plan to afford upcoming bills</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='action-card'>{action_html}</div>", unsafe_allow_html=True)
 
     unusual_events = all_events[all_events["source"] != "derived"].copy() if not all_events.empty else pd.DataFrame()
 
@@ -544,15 +740,6 @@ if page == "Home":
                 ),
                 unsafe_allow_html=True,
             )
-
-    st.markdown(
-        (
-            "<div class='insight-glow'>"
-            f"Based on your habits, you will likely spend €{habit_spend_forecast:,.0f} more this month."
-            "</div>"
-        ),
-        unsafe_allow_html=True,
-    )
 
     cols = st.columns(5)
     with cols[0]:
@@ -582,7 +769,7 @@ if page == "Home":
             (
                 "<div class='risk-card'>"
                 "Based on your usual spending habits across your full history, "
-                f"you’ll likely spend €{habit_spend_forecast:,.0f} more this month. "
+                f"you’ll likely spend €{habit_spend_forecast:,.0f} for the rest of this month. "
                 f"If you keep going like this you will not be able to pay for {next_event['name']} coming up soon."
                 "</div>"
             ),
