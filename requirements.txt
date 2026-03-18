@@ -4,3 +4,4 @@ numpy
 python-dateutil
 scikit-learn
 joblib
+cohere>=5.0.0

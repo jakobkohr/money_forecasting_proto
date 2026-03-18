@@ -1,0 +1,254 @@
+[
+  {
+    "id": "tip_001",
+    "title": "Switch from food delivery to meal prep",
+    "body": "Food delivery apps (Deliveroo, Uber Eats, Bolt Food) add 20-40% markup over restaurant prices through delivery fees, service charges, and surge pricing. If you spend €80+/month on food delivery, switching to batch cooking on Sundays can save €40-80/month. Cook 4-5 portions at once and refrigerate — the time cost drops to under 30 minutes per meal.",
+    "tags": ["food_delivery", "eating_out", "overspending", "meal_prep"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_002",
+    "title": "Set a weekly eating-out budget and track it",
+    "body": "Eating out is one of the easiest categories to overspend on because individual transactions feel small. Set a firm weekly budget (e.g., €40/week = €160/month) and track it in real time. When you hit the cap, switch to home cooking for the rest of the week. Research shows people who track food spending reduce it by 15-20% within a month.",
+    "tags": ["eating_out", "budgeting", "tracking", "overspending"],
+    "category": "budgeting"
+  },
+  {
+    "id": "tip_003",
+    "title": "Cut nightlife costs with a pre-drink strategy",
+    "body": "Bar and nightlife spending is notoriously hard to control in the moment. A practical technique: set a hard cash limit before going out and leave your card at home. Pre-drinking at home (€5-10 in drinks) before going out can reduce bar spend by 30-50% per outing. If you go out 2-3x/month, this can save €60-120/month.",
+    "tags": ["nightlife", "impulse", "overspending", "weekend_activities"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_004",
+    "title": "Identify and cancel unused subscriptions",
+    "body": "The average person pays for 3-5 subscriptions they barely use. Audit your bank statement for recurring charges: streaming services, gym memberships, app subscriptions, news sites. Cancel anything you haven't used in the last 30 days. Tools like your bank's recurring payment view can surface these automatically. Even cancelling €30/month in unused subscriptions adds up to €360/year.",
+    "tags": ["subscriptions", "recurring", "budgeting", "audit"],
+    "category": "recurring_costs"
+  },
+  {
+    "id": "tip_005",
+    "title": "Build a 3-month emergency fund",
+    "body": "A 3-month emergency fund (3x your monthly expenses) protects you from going into debt when unexpected costs hit — car repairs, medical bills, job loss. Start small: save €50-100/month automatically on payday, before you spend anything else. Even €500 is enough to cover most short-term emergencies without resorting to credit. Park it in a separate savings account so you're not tempted to dip into it.",
+    "tags": ["emergency_fund", "savings", "financial_security"],
+    "category": "savings"
+  },
+  {
+    "id": "tip_006",
+    "title": "Use the 50/30/20 budgeting rule",
+    "body": "The 50/30/20 rule divides your after-tax income into: 50% needs (rent, groceries, transport, utilities), 30% wants (eating out, entertainment, shopping), 20% savings and debt repayment. If you're spending more than 30% on wants, cut back there first. Track for one month to see where your money actually goes — most people are surprised that 'wants' consume 40-50% of their income.",
+    "tags": ["budgeting", "50/30/20", "savings", "income"],
+    "category": "budgeting"
+  },
+  {
+    "id": "tip_007",
+    "title": "Automate savings on payday",
+    "body": "The most reliable saving strategy is to automate it: set up a standing order that transfers a fixed amount to savings on the same day your salary arrives. Even 5-10% of your income (e.g., €100-200/month on a €2,000 salary) compounds significantly over time. By automating, you never 'feel' the money leaving — you naturally adjust your spending to what's left.",
+    "tags": ["savings", "automation", "payday", "habits"],
+    "category": "savings"
+  },
+  {
+    "id": "tip_008",
+    "title": "Apply the 24-hour rule before impulse purchases",
+    "body": "Before buying anything non-essential over €30, wait 24 hours. Put the item in your cart but don't check out. Studies show that 60-80% of impulse purchase urges disappear overnight. For purchases over €100, wait a full week. This single habit can prevent €100-300/month in impulse spending for people who shop online frequently.",
+    "tags": ["impulse", "shopping", "habits", "overspending"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_009",
+    "title": "Reduce transport costs with a monthly pass",
+    "body": "If you use public transport 3+ times per week, a monthly pass almost always beats paying per ride. In most European cities, a monthly transit pass costs €50-80 and saves €30-60 vs. paying individually. If you're using taxis or ride-shares regularly, calculate your monthly spend — switching to transit even 3 days per week can save €80-120/month.",
+    "tags": ["transport", "public_transport", "monthly_pass", "savings"],
+    "category": "transport"
+  },
+  {
+    "id": "tip_010",
+    "title": "Grocery shop with a list to prevent impulse buys",
+    "body": "Going to the supermarket without a list typically adds 20-30% to your grocery bill through unplanned purchases. Plan your meals for the week on Sunday, write a precise shopping list, and stick to it. Also: never shop hungry (it increases impulse buys by up to 64% according to research). Batch cooking from your grocery list means fewer takeaway orders when you're too tired to cook.",
+    "tags": ["groceries", "impulse", "meal_planning", "shopping_list"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_011",
+    "title": "Renegotiate or switch utility and phone plans annually",
+    "body": "Phone contracts, internet plans, and insurance premiums typically increase 3-10% per year without notification. Set a calendar reminder to review these annually. Call your provider and ask for a retention discount — providers commonly offer 10-20% discounts to customers who threaten to leave. Switching internet or phone providers can save €10-30/month (€120-360/year).",
+    "tags": ["utilities", "phone", "subscriptions", "recurring", "negotiation"],
+    "category": "recurring_costs"
+  },
+  {
+    "id": "tip_012",
+    "title": "Pay off credit card in full each month",
+    "body": "Credit card interest rates are typically 20-25% APR. Carrying a balance of €500 costs you €100-125 per year in interest alone — money that produces nothing for you. Make it a non-negotiable rule to pay the full statement balance, not just the minimum, every month. If you can't pay in full, you're spending money you don't have — treat the credit limit as off-limits.",
+    "tags": ["credit_card", "debt", "interest", "financial_health"],
+    "category": "debt"
+  },
+  {
+    "id": "tip_013",
+    "title": "Track your net worth monthly",
+    "body": "Net worth (assets minus liabilities) is the true measure of financial health, not just monthly income. Spend 10 minutes each month listing: bank balances, savings, investments on one side; loans, credit card balances, other debts on the other. Watching net worth grow (or shrink) each month is the most motivating financial habit you can build — it makes abstract money goals concrete.",
+    "tags": ["net_worth", "tracking", "financial_health", "habits"],
+    "category": "budgeting"
+  },
+  {
+    "id": "tip_014",
+    "title": "Share streaming subscriptions with family or friends",
+    "body": "Most streaming services (Netflix, Spotify, YouTube Premium) offer family or group plans at 1.5-2x the individual price but can be shared by 4-6 people. Splitting a family plan among 4 people typically costs €3-5 each vs. €10-15 individually — saving €5-10/month per person, or €60-120/year. Even splitting one subscription can save €70+/year.",
+    "tags": ["subscriptions", "streaming", "sharing", "savings"],
+    "category": "recurring_costs"
+  },
+  {
+    "id": "tip_015",
+    "title": "Set category spending limits at the start of each month",
+    "body": "Before each month begins, allocate a specific euro amount to each spending category: groceries, eating out, transport, entertainment. Write these down or set them in a budgeting app. When a category runs out, stop spending there. This prevents the common pattern of spending freely early in the month and scrambling at the end — studies show that people with explicit category limits spend 15-25% less overall.",
+    "tags": ["budgeting", "categories", "limits", "monthly_planning"],
+    "category": "budgeting"
+  },
+  {
+    "id": "tip_016",
+    "title": "Avoid weekend spending traps with planned activities",
+    "body": "Weekend spending often spikes because unplanned time leads to expensive default activities (bars, restaurants, shopping). Plan at least one free or cheap activity per weekend: hiking, cooking a new recipe, a museum free day, visiting a park. Having a positive alternative reduces the temptation to spend out of boredom. People who plan weekends typically spend 20-35% less than those who don't.",
+    "tags": ["weekend_activities", "planning", "overspending", "habits"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_017",
+    "title": "Maintain a €500-1000 buffer in your current account",
+    "body": "Running your current account close to zero sets you up for overdraft fees (€25-35 per incident in most banks) and forces expensive short-term borrowing when unexpected expenses hit. Treat €500-1000 as a permanent floor — money that's 'already spent' in your mental accounting. This buffer alone can save €100-300/year in bank fees and prevents the stress of near-zero balance emergencies.",
+    "tags": ["buffer", "overdraft", "cash_flow", "financial_security"],
+    "category": "savings"
+  },
+  {
+    "id": "tip_018",
+    "title": "Use cash for discretionary spending to feel the cost",
+    "body": "Paying by card is psychologically painless — research shows card users spend 12-18% more than cash payers for the same items. For discretionary categories (eating out, entertainment, shopping), withdraw a weekly cash allowance and stop when it's gone. The physical act of handing over bills makes spending feel real. Many people find this single change reduces discretionary spending by €50-100/month.",
+    "tags": ["cash", "spending_psychology", "discretionary", "habits"],
+    "category": "budgeting"
+  },
+  {
+    "id": "tip_019",
+    "title": "Buy groceries at discount supermarkets",
+    "body": "Switching from premium supermarkets (e.g., Waitrose, Albert Heijn premium lines) to discount equivalents (Lidl, Aldi, Penny) for staples can cut your grocery bill by 20-40% without meaningfully affecting nutrition or quality. Most people find their own-brand items at discount stores are equivalent to branded items at premium stores. A €200/month grocery budget could drop to €120-150.",
+    "tags": ["groceries", "discount", "savings", "food"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_020",
+    "title": "Review and cut subscription services quarterly",
+    "body": "Set a recurring calendar event every 3 months to audit all subscription charges. Go through your last 3 months of bank statements and list every recurring charge. Ask yourself: have I used this more than twice in the last month? If no, cancel it. Free trials that converted to paid subscriptions are a common hidden cost — they average €15-25/month per forgotten subscription.",
+    "tags": ["subscriptions", "audit", "recurring", "quarterly_review"],
+    "category": "recurring_costs"
+  },
+  {
+    "id": "tip_021",
+    "title": "Cook lunch instead of buying it every day",
+    "body": "Buying lunch daily (a sandwich, salad, or restaurant meal) costs €7-12 per meal, or €140-240/month for 20 working days. Preparing lunch at home or batch-cooking at the start of the week costs €2-4 per meal, saving €60-160/month. Even preparing lunch 3 days per week and buying it 2 days saves €50-80/month. Over a year, this is €600-1,920 in savings.",
+    "tags": ["eating_out", "lunch", "meal_prep", "savings", "daily_habits"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_022",
+    "title": "Use the envelope method for problem categories",
+    "body": "If you consistently overspend in one category (eating out, shopping, entertainment), try the envelope method: at the start of the month, put that category's budget in cash in a labeled envelope. When the envelope is empty, you're done spending in that category for the month. This is low-tech but highly effective — the physical constraint makes budget limits undeniable.",
+    "tags": ["envelope_method", "budgeting", "cash", "overspending", "categories"],
+    "category": "budgeting"
+  },
+  {
+    "id": "tip_023",
+    "title": "Buy second-hand for non-essential items",
+    "body": "Electronics, clothing, furniture, and sports equipment hold 30-70% less value once used, meaning you can buy near-new condition items at fraction of retail price on platforms like Vinted, Facebook Marketplace, eBay, or Back Market. If your shopping budget is overstretched, shifting 50% of purchases to second-hand can reduce that category by 30-50% while getting the same items.",
+    "tags": ["shopping", "second_hand", "savings", "sustainable"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_024",
+    "title": "Negotiate rent or find a flatmate to split costs",
+    "body": "Rent is typically the largest fixed cost. If it exceeds 35% of your take-home income, you have a structural budget problem no amount of coffee-cutting will fix. Consider: renegotiating your lease (landlords often prefer renewing vs. vacancy), finding a flatmate to split costs by 40-50%, or moving to a slightly cheaper area. A €100/month reduction in rent saves €1,200/year.",
+    "tags": ["rent", "housing", "fixed_costs", "flatmate"],
+    "category": "recurring_costs"
+  },
+  {
+    "id": "tip_025",
+    "title": "Limit online shopping sessions to reduce impulse buys",
+    "body": "Browsing online shops without a specific item in mind leads to discovery-based buying — you buy things you didn't know you wanted. Unsubscribe from promotional emails, delete saved payment details from shopping apps (re-entering them adds friction), and designate one day per week as your only allowed shopping browsing time. These friction points reduce impulse online shopping by 40-60%.",
+    "tags": ["shopping", "impulse", "online", "friction", "habits"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_026",
+    "title": "Plan for irregular expenses to avoid budget shocks",
+    "body": "Car maintenance, travel, gifts, annual subscriptions, and insurance renewals are predictable but irregular. Estimate your annual total for these (e.g., €1,200/year = €100/month) and save that amount monthly into a separate 'irregular expenses' pot. This turns budget shocks into planned withdrawals, preventing you from going negative when a €400 car repair or €150 birthday gift hits.",
+    "tags": ["irregular_expenses", "planning", "savings", "budget_shocks"],
+    "category": "savings"
+  },
+  {
+    "id": "tip_027",
+    "title": "Stop buying bottled water and coffee on the go",
+    "body": "Buying bottled water (€1-2 each) and takeaway coffee (€3-5 each) daily adds up to €60-150/month. Invest €20-30 in a reusable water bottle and €30-60 in a good travel mug and basic coffee setup at home. The break-even point is under 2 weeks. This is a classic 'small things add up' scenario — €100/month saved = €1,200/year from a €50 one-time investment.",
+    "tags": ["coffee", "water", "daily_habits", "small_savings"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_028",
+    "title": "Use a separate account for savings to reduce temptation",
+    "body": "Keeping savings in the same account as your spending makes them psychologically spendable. Open a separate savings account (ideally at a different bank to add friction) and transfer savings there on payday. When you can't see the money in your main account, you don't spend it. People who separate savings accounts save on average 2-3x more than those who keep everything together.",
+    "tags": ["savings", "psychology", "accounts", "automation"],
+    "category": "savings"
+  },
+  {
+    "id": "tip_029",
+    "title": "Reduce alcohol spending by switching venues or frequency",
+    "body": "Drinking in bars typically costs 3-5x more than drinking at home. If your bar/nightlife spend exceeds 8% of income, consider: going out less frequently (every 2 weeks instead of weekly), switching to pre-drinks at home before going out, or choosing bars with cheaper drinks early in the evening. Reducing from 3 to 2 nights out per month typically saves €60-120.",
+    "tags": ["nightlife", "alcohol", "bar", "overspending", "weekend_activities"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_030",
+    "title": "Refinance high-interest debt aggressively",
+    "body": "If you have credit card debt or personal loans above 15% APR, refinancing to a lower-rate product should be your highest-priority financial move. Even a personal loan at 8% APR vs. a credit card at 22% on a €2,000 balance saves €280/year in interest. Look for 0% balance transfer credit cards (usually available for 12-18 months) which give you a window to pay down principal without interest.",
+    "tags": ["debt", "credit_card", "refinancing", "interest", "high_priority"],
+    "category": "debt"
+  },
+  {
+    "id": "tip_031",
+    "title": "Meal plan to reduce food waste and grocery costs",
+    "body": "The average household wastes 20-30% of food purchased, which directly translates to wasted money. Meal planning before grocery shopping reduces waste dramatically. Before shopping, check what's already in your fridge and build meals around it. Apps like 'Too Good To Go' can supplement cheap ingredients. Cutting food waste alone can reduce a €200/month grocery bill by €40-60.",
+    "tags": ["meal_planning", "groceries", "food_waste", "savings"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_032",
+    "title": "Review your mobile plan and downgrade if overpaying",
+    "body": "Most people are on mobile plans with data allowances they don't use. Check your last 3 months of data usage — if you consistently use less than 80% of your plan's data, downgrade. Moving from a €35/month to a €20/month plan saves €180/year. MVNOs (virtual network operators like Lyca, Lebara, or 1&1) often offer the same network coverage at 40-60% lower prices than major carriers.",
+    "tags": ["mobile", "phone_plan", "subscriptions", "downgrade", "savings"],
+    "category": "recurring_costs"
+  },
+  {
+    "id": "tip_033",
+    "title": "Set a firm monthly shopping budget and stick to it",
+    "body": "Uncontrolled shopping spending is often driven by sales psychology (limited-time offers, flash sales) rather than actual need. Set a hard monthly budget for non-grocery purchases (e.g., €100/month for clothing, household items, etc.). Once hit, no more shopping that month. Disable sale notifications from retailers — they are specifically designed to trigger impulse purchases.",
+    "tags": ["shopping", "budget", "sales", "impulse", "limits"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_034",
+    "title": "Cycle or walk short journeys instead of using transport",
+    "body": "Journeys under 3-4 km are often faster by bike or on foot than by car or public transport, especially in cities. If you take 2-3 short taxi or ride-share trips per week that could be walked or cycled, you're spending €20-40/month unnecessarily. A used bicycle (€80-150 second-hand) pays for itself within 2-4 months of replacing short ride-shares.",
+    "tags": ["transport", "cycling", "walking", "savings", "health"],
+    "category": "transport"
+  },
+  {
+    "id": "tip_035",
+    "title": "Consolidate errands to reduce impulse spending trips",
+    "body": "Each trip to a shop or retail area is an opportunity to impulse buy. Consolidating all errands into one weekly trip (instead of multiple small trips) reduces your total exposure to buying temptation. Research shows each 'quick pop-in' to a shop results in 2-3 unplanned purchases on average. Fewer trips = fewer opportunities for unplanned spending.",
+    "tags": ["shopping", "errands", "impulse", "habits", "planning"],
+    "category": "overspending"
+  },
+  {
+    "id": "tip_036",
+    "title": "Avoid overdraft by monitoring your account weekly",
+    "body": "Overdraft fees (€25-40 per incident) and arranged overdraft interest (15-40% APR) are extremely expensive forms of short-term borrowing. Set up low-balance alerts (e.g., notify me when balance drops below €200) so you always have time to transfer money before going overdrawn. A 5-minute weekly balance check prevents most overdraft situations and eliminates those fees entirely.",
+    "tags": ["overdraft", "monitoring", "balance", "fees", "cash_flow"],
+    "category": "cash_flow"
+  }
+]

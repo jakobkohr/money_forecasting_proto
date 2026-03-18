@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 
 import altair as alt
 import joblib
@@ -21,7 +22,7 @@ from src.analytics import (
 from src.features import add_calendar_features, add_rolling_features, transactions_to_daily
 from src.suggestions import generate_shortfall_suggestions, guardrails_from_flags
 
-st.set_page_config(page_title="Money Assistant", layout="wide")
+st.set_page_config(page_title="Finsight", layout="wide")
 
 st.markdown(
     """
@@ -299,6 +300,51 @@ st.markdown(
         .tile-value { font-size: 1.45rem; }
         .breakdown-grid { grid-template-columns: 1fr; }
     }
+    .advice-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 4px;
+    }
+    @media (max-width: 980px) {
+        .advice-grid { grid-template-columns: 1fr; }
+    }
+    .advice-card {
+        border-radius: 16px;
+        padding: 14px 16px;
+        background: linear-gradient(140deg, rgba(30, 27, 75, 0.65), rgba(15, 23, 42, 0.82));
+        border: 1px solid rgba(167, 139, 250, 0.38);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .advice-priority {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 2px 8px;
+        border-radius: 999px;
+        display: inline-block;
+        width: fit-content;
+    }
+    .advice-priority-high   { background: rgba(239,68,68,0.22); color: #fca5a5; border: 1px solid rgba(239,68,68,0.40); }
+    .advice-priority-medium { background: rgba(251,191,36,0.18); color: #fcd34d; border: 1px solid rgba(251,191,36,0.38); }
+    .advice-priority-low    { background: rgba(52,211,153,0.18); color: #6ee7b7; border: 1px solid rgba(52,211,153,0.35); }
+    .advice-title  { font-size: 1rem; font-weight: 700; color: #c4b5fd; margin: 0; }
+    .advice-action { font-size: 0.93rem; color: #e2e8ff; }
+    .advice-reason { font-size: 0.83rem; color: #a5b4d0; font-style: italic; }
+    .advice-savings { font-size: 0.82rem; font-weight: 600; color: #67e8f9; margin-top: 2px; }
+    .advice-trigger {
+        margin-top: 6px;
+        margin-bottom: 10px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: rgba(99, 102, 241, 0.12);
+        border: 1px solid rgba(99, 102, 241, 0.28);
+        color: #c7d2fe;
+        font-size: 0.88rem;
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -472,14 +518,14 @@ def _risk_class(risk: str) -> str:
     return "status-bad"
 
 
-st.markdown("<div class='topbar'>Monthly Money Forecast</div>", unsafe_allow_html=True)
+st.markdown("<div class='topbar'>Finsight</div>", unsafe_allow_html=True)
 st.markdown(
     "<div class='subtitle'>Banking co-pilot for habit risk and upcoming obligations</div>",
     unsafe_allow_html=True,
 )
 
 st.sidebar.header("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "Insights", "Transactions", "Upcoming"], index=0)
+page = st.sidebar.radio("Go to", ["Home", "Insights", "Transactions", "Upcoming", "Chat"], index=0)
 
 st.sidebar.header("Data")
 source = st.sidebar.radio("Data source", ["Demo (Revolut sandbox)", "Upload CSV (optional)"], index=0)
@@ -720,6 +766,112 @@ if page == "Home":
         st.markdown("<div class='section-title'>Action plan to afford upcoming bills</div>", unsafe_allow_html=True)
         st.markdown(f"<div class='action-card'>{action_html}</div>", unsafe_allow_html=True)
 
+    # ── Smart Financial Advice (RAG) ────────────────────────────────────────
+    st.markdown("<div class='section-title'>💡 Smart Financial Advice</div>", unsafe_allow_html=True)
+
+    cohere_api_key = os.environ.get("COHERE_API_KEY", "").strip()
+    advice_cache_key = f"advice_{as_of_dt.date()}_{len(tx)}_{float(tx['amount'].sum()):.0f}"
+
+    if not cohere_api_key:
+        st.info(
+            "Set the `COHERE_API_KEY` environment variable to enable AI-powered personalized advice. "
+            "Example: `export COHERE_API_KEY=your-key-here`"
+        )
+    else:
+        col_adv, col_refresh = st.columns([4, 1])
+        with col_refresh:
+            refresh_clicked = st.button("↺ Refresh", key="refresh_advice")
+
+        if refresh_clicked or st.session_state.get("_advice_cache_key") != advice_cache_key:
+            st.session_state.pop("_smart_advice", None)
+            st.session_state.pop("_advice_trigger", None)
+
+        if "_smart_advice" not in st.session_state:
+            from src.rag import (
+                build_user_context,
+                embed_knowledge_base,
+                get_advice,
+                load_tips,
+            )
+            from src.triggers import detect_triggers
+
+            import cohere
+
+            triggers = detect_triggers(
+                tx=tx,
+                monthly_income=monthly_income,
+                category_30=category_30,
+                flagged=flagged,
+                projection=projection,
+                all_events=all_events,
+                as_of=as_of_dt,
+            )
+
+            if not triggers:
+                st.success("Your finances look healthy — no urgent concerns detected.")
+                st.session_state["_smart_advice"] = []
+                st.session_state["_advice_trigger"] = None
+                st.session_state["_advice_cache_key"] = advice_cache_key
+            else:
+                top_trigger = triggers[0]["query"]
+
+                user_ctx = build_user_context(
+                    monthly_income=monthly_income,
+                    current_balance=projection["current_balance"],
+                    projected_end_balance=projection["projected_end_balance"],
+                    habit_spend_forecast=habit_spend_forecast,
+                    upcoming_commitments=upcoming_commitments,
+                    risk_state=projection["risk_state"],
+                    category_30=category_30,
+                    flagged=flagged,
+                    monthly_income_ref=monthly_income,
+                )
+
+                try:
+                    co = cohere.ClientV2(api_key=cohere_api_key)
+                    with st.spinner("Generating personalized advice…"):
+                        tips = load_tips()
+                        tip_embeddings = embed_knowledge_base(co, tips)
+                        advice = get_advice(co, top_trigger, user_ctx, tips, tip_embeddings)
+                    st.session_state["_smart_advice"] = advice
+                    st.session_state["_advice_trigger"] = top_trigger
+                    st.session_state["_advice_cache_key"] = advice_cache_key
+                except Exception as exc:
+                    st.warning(f"Could not generate advice: {exc}")
+                    st.session_state["_smart_advice"] = []
+                    st.session_state["_advice_trigger"] = None
+                    st.session_state["_advice_cache_key"] = advice_cache_key
+
+        advice_list = st.session_state.get("_smart_advice", [])
+        advice_trigger = st.session_state.get("_advice_trigger")
+
+        if advice_trigger:
+            st.markdown(
+                f"<div class='advice-trigger'>🎯 Concern detected: {advice_trigger}</div>",
+                unsafe_allow_html=True,
+            )
+
+        if advice_list:
+            st.markdown("<div class='advice-grid'>", unsafe_allow_html=True)
+            for card in advice_list:
+                priority = str(card.get("priority", "medium")).lower()
+                savings = card.get("estimated_savings", 0)
+                reason = card.get("reason", "")
+                st.markdown(
+                    (
+                        "<div class='advice-card'>"
+                        f"<span class='advice-priority advice-priority-{priority}'>{priority}</span>"
+                        f"<div class='advice-title'>{card.get('title', '')}</div>"
+                        f"<div class='advice-action'>{card.get('action', '')}</div>"
+                        + (f"<div class='advice-reason'>{reason}</div>" if reason else "")
+                        + f"<div class='advice-savings'>Est. monthly saving: €{savings}</div>"
+                        "</div>"
+                    ),
+                    unsafe_allow_html=True,
+                )
+            st.markdown("</div>", unsafe_allow_html=True)
+    # ── end Smart Financial Advice ───────────────────────────────────────────
+
     unusual_events = all_events[all_events["source"] != "derived"].copy() if not all_events.empty else pd.DataFrame()
 
     if unusual_events.empty:
@@ -952,3 +1104,140 @@ elif page == "Upcoming":
             .properties(title="Projected balance path", height=300)
         )
         st.altair_chart(line, use_container_width=True)
+
+elif page == "Chat":
+    from src.chatbot import (
+        apply_filter,
+        build_financial_context,
+        build_system_prompt,
+        parse_response,
+    )
+
+    st.markdown("<div class='section-title'>Financial Assistant</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='subtitle'>Ask anything about your finances — or ask to filter your transactions</div>",
+        unsafe_allow_html=True,
+    )
+
+    cohere_api_key_chat = os.environ.get("COHERE_API_KEY", "").strip()
+    if not cohere_api_key_chat:
+        st.info("Set the `COHERE_API_KEY` environment variable to use the chat assistant.")
+        st.stop()
+
+    import cohere as _cohere
+
+    # Reset chat when data/date changes
+    chat_data_key = f"chat_{as_of_dt.date()}_{len(tx)}"
+    if st.session_state.get("_chat_data_key") != chat_data_key:
+        st.session_state["_chat_history"] = []
+        st.session_state["_chat_system_prompt"] = None
+        st.session_state["_chat_data_key"] = chat_data_key
+
+    # Build system prompt once per data state
+    if st.session_state.get("_chat_system_prompt") is None:
+        fin_ctx = build_financial_context(
+            tx=tx,
+            monthly_income=monthly_income,
+            category_30=category_30,
+            flagged=flagged,
+            projection=projection,
+            all_events=all_events,
+            as_of=as_of_dt,
+        )
+        st.session_state["_chat_system_prompt"] = build_system_prompt(fin_ctx)
+
+    # Suggested starter prompts
+    st.markdown("**Try asking:**")
+    suggestions = [
+        "Show me all transactions where I overspent",
+        "Which impulse buys hurt my balance the most?",
+        "Show spending that's too high given my upcoming credit card repayment",
+        "What are my top 5 biggest purchases this month?",
+    ]
+    cols_s = st.columns(len(suggestions))
+    for i, suggestion in enumerate(suggestions):
+        with cols_s[i]:
+            if st.button(suggestion, key=f"sug_{i}", use_container_width=True):
+                st.session_state["_pending_chat_input"] = suggestion
+
+    st.divider()
+
+    # Replay full chat history
+    history: list[dict] = st.session_state.get("_chat_history", [])
+    for msg in history:
+        with st.chat_message(msg["role"]):
+            st.write(msg["content"])
+            if msg.get("show_transactions") and msg.get("filtered_tx") is not None:
+                filtered_df: pd.DataFrame = msg["filtered_tx"]
+                label = msg.get("filter_label", "Filtered transactions")
+                if not filtered_df.empty:
+                    st.caption(f"📋 {label} — {len(filtered_df)} transaction(s)")
+                    display_cols = [c for c in ["date", "merchant", "category", "amount", "tags"] if c in filtered_df.columns]
+                    st.dataframe(filtered_df[display_cols], use_container_width=True)
+                else:
+                    st.info("No transactions matched this filter.")
+
+    # Clear button
+    if history:
+        if st.button("Clear conversation", key="clear_chat"):
+            st.session_state["_chat_history"] = []
+            st.session_state.pop("_pending_chat_input", None)
+            st.rerun()
+
+    # Handle suggestion button clicks (sets pending input, then re-renders)
+    pending = st.session_state.pop("_pending_chat_input", None)
+
+    user_input = st.chat_input("Ask about your finances or request a transaction filter…")
+    user_input = user_input or pending
+
+    if user_input:
+        # Display user message immediately
+        with st.chat_message("user"):
+            st.write(user_input)
+
+        # Build full message list for Cohere (system + history + new message)
+        cohere_messages = [
+            {"role": "system", "content": st.session_state["_chat_system_prompt"]}
+        ]
+        for h in history:
+            cohere_messages.append({"role": h["role"], "content": h["content"]})
+        cohere_messages.append({"role": "user", "content": user_input})
+
+        # Call Cohere
+        co_chat = _cohere.ClientV2(api_key=cohere_api_key_chat)
+        with st.chat_message("assistant"):
+            with st.spinner("Thinking…"):
+                try:
+                    resp = co_chat.chat(
+                        model="command-r-08-2024",
+                        messages=cohere_messages,
+                    )
+                    raw = resp.message.content[0].text.strip()
+                    parsed = parse_response(raw)
+                except Exception as exc:
+                    parsed = {"message": f"Sorry, something went wrong: {exc}", "show_transactions": False, "filter": None}
+
+            message_text = parsed.get("message", "")
+            st.write(message_text)
+
+            filtered_df = None
+            filter_label = None
+            if parsed.get("show_transactions") and parsed.get("filter"):
+                filtered_df = apply_filter(tx, flagged, parsed["filter"], as_of_dt)
+                filter_label = parsed["filter"].get("label", "Filtered transactions")
+                if not filtered_df.empty:
+                    st.caption(f"📋 {filter_label} — {len(filtered_df)} transaction(s)")
+                    display_cols = [c for c in ["date", "merchant", "category", "amount", "tags"] if c in filtered_df.columns]
+                    st.dataframe(filtered_df[display_cols], use_container_width=True)
+                else:
+                    st.info("No transactions matched this filter.")
+
+        # Persist to history
+        st.session_state["_chat_history"].append({"role": "user", "content": user_input})
+        st.session_state["_chat_history"].append({
+            "role": "assistant",
+            "content": message_text,
+            "show_transactions": parsed.get("show_transactions", False),
+            "filtered_tx": filtered_df,
+            "filter_label": filter_label,
+        })
